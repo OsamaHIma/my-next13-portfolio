@@ -86,7 +86,7 @@ const Navbar = () => {
           </button>
 
           <ul
-            className={`${showThemeMenu} menuTransition flex w-[9rem] absolute right-[-30%] md:right-[60%] z-10 flex-col m-8 shadow-lg select-none`}
+            className={`${showThemeMenu} menuTransition flex w-[9rem] absolute right-0 md:right-[60%] z-10 flex-col m-8 shadow-lg select-none`}
           >
             <li
               className="bg-theme-color pb-2 pt-4 rounded-t-md px-8 cursor-pointer text-slate-100 hover:text-gray-400"
