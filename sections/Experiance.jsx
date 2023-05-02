@@ -17,7 +17,7 @@ const Experience = () => {
       date={experience.date}
       dateClassName="text-indigo-800 dark:text-slate-100"
       iconStyle={{ background: experience.iconBg }}
-      
+
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
@@ -57,7 +57,7 @@ const Experience = () => {
         }}
       >
         <p className={`${styles.sectionSubText}`}>What I have learned so far</p>
-        <h2 className={`${styles.sectionHeadText}`}>My Certifications.</h2>
+        <h2 className={`${styles.sectionHeadText}`}><span className="text-theme-color">02.</span> My Certifications.</h2>
       </motion.div>
       <div className="flex flex-col mt-20">
         <VerticalTimeline>

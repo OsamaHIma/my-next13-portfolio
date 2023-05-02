@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import { styles } from "./styles";
 
 const Contact = () => {
   const formRef = useRef();
@@ -86,9 +87,9 @@ const Contact = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, type: "spring" }}
-          className="text-5xl mb-24 font-bold"
+          className={` ${styles.sectionHeadText} mb-24 font-bold`}
         >
-          Get in Touch
+         <span className="text-theme-color">04.</span> Get in Touch
         </motion.h1>
       </div>
       <motion.div

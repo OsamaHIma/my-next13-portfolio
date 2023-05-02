@@ -1,7 +1,7 @@
 "use client";
 import { mySkills } from "@/constants";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 const AboutMe = () => {
   return (
     <section>
@@ -61,16 +61,6 @@ const AboutMe = () => {
               ))}
             </ul>
           </div>
-          {/* <div
-            className="about-grid-photo relative w-max-content"
-            style={{ width: "max-content", height: "max-content" }}
-          >
-            <div className="overlay"></div>
-            <div className="overlay-border"></div>
-            <div className="about-grid-photo-container relative w-[350px] h-[350px] object-cover">
-              <Image src="/real-estate.png" alt="profile" fill />
-            </div>
-          </div> */}
         </div>
       </motion.div>
     </section>

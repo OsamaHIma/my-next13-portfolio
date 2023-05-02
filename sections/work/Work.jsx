@@ -5,6 +5,7 @@ import { GithubIcon, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import "./work.scss";
+import { styles } from "../styles";
 
 const Work = () => {
   return (
@@ -20,8 +21,8 @@ const Work = () => {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2 className="text-3xl md:text-4xl dark:text-slate-300 after:w-80 after:ml-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block">
-          <span className="text-theme-color">02.</span> Projects I&apos;v built
+        <h2 className={`text-2xl md:text-4xl dark:text-slate-300 after:w-80 after:ml-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block`}>
+          <span className={`text-theme-color`}>03.</span> Projects I&apos;v built
         </h2>
       </motion.div>
       <div className="projects-container">
