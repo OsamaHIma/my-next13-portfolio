@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="mt-16 relative mx-16 flex flex-col paddings items-start gap-4 justify-center min-h-[60vh]">
+    <section className="mt-36 relative mx-16 flex flex-col paddings items-start gap-4 justify-center min-h-[60vh]">
       <h1 className="text-theme-color font-medium text-2xl">Hi my name is</h1>
       <h2 className="text-3xl md:text-7xl font-semibold">Osama Ibrahim.</h2>
-      <div className="absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 top-[115px] md:top-[165px] left-5" />
+      <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 top-[115px] md:top-[165px] left-5" />
       <h3 className="text-3xl md:text-7xl font-medium">
         <span className="text-slate-50">Fr</span>ont-end Developer.
       </h3>

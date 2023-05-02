@@ -17,6 +17,7 @@
   --light-slate: #ccd6f6;
   --lightest-slate: #a8b2d1;
   --theme-color: #9d00ff;
+  --toastify-color-dark: #1e2d47 !important;
 }
 
 ::-moz-selection {
@@ -48,21 +49,12 @@ main {
   user-select: none;
 }
 
-
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--dark-slate) var(--background-color);
 }
 ::-webkit-scrollbar {
-  width: 12px;
-}
-::-webkit-scrollbar-track {
-  background: var(--background-color);
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--dark-slate);
-  border: 3px solid var(--background-color);
-  border-radius: 10px;
+  width: 0px;
 }
 
 .btn {
@@ -89,35 +81,15 @@ html {
   align-items: center;
   flex-wrap: wrap;
 }
-.flexStart {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.validated input,
+.validated textarea {
+  outline: #00cea8;
+  border: 2px solid #00cea8;
 }
-
-.flexEnd {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.flexColCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.flexColStart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.flexColEnd {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+.not-validated input,
+.not-validated textarea {
+  outline: #ce0000;
+  border: 2px solid #ce0000;
 }
 
 /* media queries */
@@ -125,6 +97,11 @@ html {
 @media (min-width: 640px) {
   .paddings {
     padding: 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .hero-circle {
+    top: 150px !important;
   }
 }
 

@@ -10,13 +10,14 @@ import {
   ChevronLeftIcon,
 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 // h- stands for header-
 const Navbar = () => {
   const { setTheme } = useTheme();
   const [showThemeMenu, setThemeMenu] = useState("-top-[400px]");
   const [showMenu, setMenu] = useState("-right-[400px]");
+  const [scrolled, setScrolled] = useState(false);
   // theme Menu toggler button
   const openThemeMenu = () => {
     if (showMenu === "right-0") {
@@ -41,22 +42,40 @@ const Navbar = () => {
       setMenu("right-0");
     }
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 170) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <section className="h-wrapper transition-all ease-in text-slate-800 dark:text-white">
+    <section
+      className={` ${
+        scrolled &&
+        "backdrop-blur-md bg-main-color/60 !text-slate-100 dark:bg-transparent"
+      } w-full fixed top-0 z-20 h-wrapper transition-all ease-in text-slate-800 dark:text-white`}
+    >
       <motion.div
         initial={{ y: "-2rem", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", duration: 1 }}
         viewport={{ once: true }}
-        className="h-container relative py-4 flexCenter border-b-[3px] border-slate-300 dark:border-indigo-400 !justify-between paddings innerWidth"
+        className="h-container relative py-4 flexCenter !flex-nowrap border-b-[3px] border-slate-300 dark:border-indigo-400 !justify-between innerWidth"
       >
         <Link href="/">
-          <h1 className="font-bold text-xl">
+          <h1 className="font-bold md:text-xl">
             <ChevronLeftIcon className="inline text-theme-color" size={37} />
             OSAMA IBRAHIM <span className="text-md">/</span>
             <ChevronRightIcon className="inline text-theme-color" size={37} />
           </h1>
-
         </Link>
         <nav className="flexCenter relative">
           {/* Theme menu */}
@@ -107,9 +126,15 @@ const Navbar = () => {
               ))}
               <button
                 type="button"
-                className="btn border-2 border-solid border-theme-color"
+                className={`${
+                  scrolled && "bg-theme-color"
+                } btn border-2 mr-4 border-solid border-theme-color`}
               >
-                <Link href="#contact" className="!text-theme-color">
+                <Link
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1TrxZ3NiMauygHNf_jcwppIcxkJvQIaXn/view?usp=share_link"
+                  className={`text-theme-color ${scrolled && "!text-slate-50"}`}
+                >
                   Resume
                 </Link>
               </button>
@@ -122,7 +147,7 @@ const Navbar = () => {
           </button>
 
           <ul
-            className={`flex lg:hidden !text-white font-medium menuTransition ${showMenu} absolute bg-black/10 dark:bg-white/10 backdrop-blur-md py-8 px-11 rounded-lg w-[15rem] top-[27%] z-10 flex-col m-8 shadow-lg`}
+            className={`flex lg:hidden !text-white font-medium menuTransition ${showMenu} absolute bg-slate-900 py-8 px-11 rounded-lg w-[15rem] top-[27%] z-10 flex-col m-8 shadow-lg`}
           >
             {navLinks.map((link, index) => (
               <li key={index} className="my-3" title={link.name}>
@@ -138,7 +163,11 @@ const Navbar = () => {
               type="button"
               className="btn !border-4 !border-solid !border-theme-color"
             >
-              <Link href="#contact" className="!text-theme-color">
+              <Link
+                target="_blank"
+                href="https://drive.google.com/file/d/1TrxZ3NiMauygHNf_jcwppIcxkJvQIaXn/view?usp=share_link"
+                className="!text-theme-color"
+              >
                 Resume
               </Link>
             </button>

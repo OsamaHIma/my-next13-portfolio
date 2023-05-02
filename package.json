@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.8.5",
@@ -18,11 +19,10 @@
     "node-fetch": "^3.3.1",
     "react": "18.2.0",
     "react-accessible-accordion": "^5.0.0",
-    "react-countup": "^6.4.2",
     "react-cursor-follow": "^2.0.0",
     "react-dom": "18.2.0",
-    "react-parallax-tilt": "^1.7.130",
-    "swiper": "^9.1.1"
+    "react-toastify": "^9.1.2",
+    "react-vertical-timeline-component": "^3.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
