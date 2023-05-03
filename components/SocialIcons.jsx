@@ -10,7 +10,7 @@ const SocialIcons = () => {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ type: "spring", duration: 1 }}
       viewport={{ once: true }}
-      className="social-icons fixed left-2 md:left-6 bottom-0"
+      className="social-icons fixed left-4 md:left-6 bottom-0"
     >
       <ul className="flex flex-col gap-6 after:content-[''] after:block after:w-[2px] after:h-20 after:mx-auto after:dark:bg-slate-50 after:bg-indigo-400 after:mb-2">
         {socialIcons.map(({ name, icon, url }) => (
