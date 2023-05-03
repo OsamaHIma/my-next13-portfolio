@@ -38,7 +38,7 @@ const AboutMe = () => {
                   overflow: "hidden",
                 }}
                 src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFZy_eOTcg&#x2F;view?embed"
-                allowFullscreen="allowfullscreen"
+                allowFullScreen="allowfullscreen"
                 allow="fullscreen"
               ></iframe>
             </div>

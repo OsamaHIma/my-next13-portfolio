@@ -9,7 +9,7 @@ const Email = () => {
     whileInView={{ x: 0, opacity: 1 }}
     transition={{ type: "spring", duration: 1 }}
     viewport={{ once: true }}
-      className="fixed bottom-0 z-30 right-6 flex flex-col gap-6 after:content-[''] after:block after:w-[2px] after:h-20 after:mx-auto after:dark:bg-slate-50 after:bg-indigo-400 after:mb-2"
+      className="fixed bottom-0 z-30 right-2 md:right-6 flex flex-col gap-6 after:content-[''] after:block after:w-[2px] after:h-20 after:mx-auto after:dark:bg-slate-50 after:bg-indigo-400 after:mb-2"
     >
       <Link
         href="mailto:osamaworkemail@gmail.com"

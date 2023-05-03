@@ -15,7 +15,7 @@ const Experience = () => {
       contentStyle={{ background: "#1e2d47", color: "#fff" }}
       contentArrowStyle={{ borderRight: "9px solid #1e2d47" }}
       date={experience.date}
-      dateClassName="text-indigo-800 dark:text-slate-100"
+      dateClassName="text-slate-400 md:text-indigo-800 dark:text-slate-100"
       iconStyle={{ background: experience.iconBg }}
 
       icon={
