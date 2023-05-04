@@ -1,6 +1,6 @@
 import "./globals.scss";
-import { Poppins } from "next/font/google";
 import Providers from "@/components/Providers";
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -8,7 +8,8 @@ const poppins = Poppins({
 });
 export const metadata = {
   title: "Osama's protfolio",
-  // description: '',
+  description: "Hello! my name is Osama I'm a Front-end Developer from Egypt",
+  keyWords: "Portfolio, Front-end, Developer"
 };
 const RootLayout = ({ children }) => {
   return (

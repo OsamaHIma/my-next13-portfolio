@@ -48,7 +48,7 @@ const Work = () => {
                   hidden: { opacity: 0, y: 0 },
                 }}
               >
-                <div className="project-image">
+                <div className="project-image rounded-lg">
                   <Link href={live_preview}>
                     <div className="project-image-overlay"></div>
                     <div className="project-image-container">
@@ -56,7 +56,7 @@ const Work = () => {
                     </div>
                   </Link>
                 </div>
-                <div className="project-info">
+                <div className="project-info rounded-lg">
                   <p className="project-info-overline">Featured Project</p>
                   <h3 className="project-info-title lg:text-slate-600 font-semibold text-3xl md:text-5xl dark:text-slate-300">
                     {name}
