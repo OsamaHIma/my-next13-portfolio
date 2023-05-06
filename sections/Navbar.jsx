@@ -132,10 +132,10 @@ const Navbar = () => {
               >
                 <Link
                   target="_blank"
-                  href="https://drive.google.com/file/d/1TrxZ3NiMauygHNf_jcwppIcxkJvQIaXn/view?usp=share_link"
+                  href="https://drive.google.com/file/d/1J195TxdC3IrJaO75RGLB79ADErtk49W5/view?usp=share_link"
                   className={`text-theme-color ${scrolled && "!text-slate-50"}`}
                 >
-                  Resume
+                 My Resume
                 </Link>
               </button>
             </ul>
@@ -165,10 +165,10 @@ const Navbar = () => {
             >
               <Link
                 target="_blank"
-                href="https://drive.google.com/file/d/1TrxZ3NiMauygHNf_jcwppIcxkJvQIaXn/view?usp=share_link"
+                href="https://drive.google.com/file/d/1J195TxdC3IrJaO75RGLB79ADErtk49W5/view?usp=share_link"
                 className="!text-theme-color"
               >
-                Resume
+               My Resume
               </Link>
             </button>
           </ul>
