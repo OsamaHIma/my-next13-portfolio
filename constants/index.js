@@ -99,6 +99,18 @@ export const projects = [
         name: "Sanity",
         color: "pink-text-gradient",
       },
+      {
+        name: "Firebase",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redux toolkit",
+        color: "pink-text-gradient",
+      },
     ],
     image: "/crwn store.png",
     source_code_link: "https://github.com/OsamaHIma/ecommerce-next13",
