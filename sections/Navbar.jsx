@@ -8,16 +8,20 @@ import {
   MenuIcon,
   ChevronRightIcon,
   ChevronLeftIcon,
+  Maximize,
+  Minimize,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
 // h- stands for header-
 const Navbar = () => {
   const { setTheme } = useTheme();
   const [showThemeMenu, setThemeMenu] = useState("-top-[400px]");
   const [showMenu, setMenu] = useState("-right-[400px]");
   const [scrolled, setScrolled] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(false);
   // theme Menu toggler button
   const openThemeMenu = () => {
     if (showMenu === "right-0") {
@@ -40,6 +44,19 @@ const Navbar = () => {
       setMenu("-right-[400px]");
     } else {
       setMenu("right-0");
+    }
+  };
+  // toggle Maximize
+  const handelMaximize = (event) => {
+    event.preventDefault();
+    if (document.fullscreenEnabled) {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+        setIsMaximized(false);
+      } else {
+        document.documentElement.requestFullscreen();
+        setIsMaximized(true);
+      }
     }
   };
   useEffect(() => {
@@ -89,21 +106,21 @@ const Navbar = () => {
             className={`${showThemeMenu} menuTransition flex w-[9rem] absolute right-0 md:right-[60%] z-10 flex-col m-8 shadow-lg select-none`}
           >
             <li
-              className="bg-theme-color pb-2 pt-4 rounded-t-md px-8 cursor-pointer text-slate-100 hover:text-gray-400"
+              className="bg-theme-color pb-2 pt-4 rounded-t-md px-8 cursor-pointer text-slate-200 hover:text-slate-50"
               onClick={() => setTheme("dark")}
             >
               <Moon className="mr-2 h-4 w-4" />
               <span>Dark</span>
             </li>
             <li
-              className=" bg-theme-color py-2 pl-8 cursor-pointer text-slate-100 hover:text-gray-400"
+              className=" bg-theme-color py-2 pl-8 cursor-pointer text-slate-200 hover:text-slate-50"
               onClick={() => setTheme("light")}
             >
               <Sun className="mr-2 h-4 w-4" />
               <span>Light</span>
             </li>
             <li
-              className=" bg-theme-color pt-2 pb-4 rounded-b-md pl-8 cursor-pointer text-slate-100 hover:text-gray-400"
+              className=" bg-theme-color pt-2 pb-4 rounded-b-md pl-8 cursor-pointer text-slate-200 hover:text-slate-50"
               onClick={() => setTheme("system")}
             >
               <Laptop className="mr-2 h-4 w-4" />
@@ -128,18 +145,26 @@ const Navbar = () => {
                 type="button"
                 className={`${
                   scrolled && "bg-theme-color"
-                } btn border-2 mr-4 border-solid border-theme-color`}
+                } btn border-2 mr-1 border-solid border-theme-color`}
               >
                 <Link
                   target="_blank"
                   href="https://drive.google.com/file/d/1J195TxdC3IrJaO75RGLB79ADErtk49W5/view?usp=share_link"
                   className={`text-theme-color ${scrolled && "!text-slate-50"}`}
                 >
-                 My Resume
+                  My Resume
                 </Link>
+              </button>
+              <button
+                className="mr-4 transition-all ease-in-out"
+                onClick={handelMaximize}
+                title="Toggle maximize and minimize screen"
+              >
+                {isMaximized ? <Minimize /> : <Maximize />}
               </button>
             </ul>
           </div>
+
           {/* for medium and small screens */}
           <button className="mx-4 block lg:hidden" onClick={openMenu}>
             <MenuIcon className="hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100" />
@@ -168,7 +193,7 @@ const Navbar = () => {
                 href="https://drive.google.com/file/d/1J195TxdC3IrJaO75RGLB79ADErtk49W5/view?usp=share_link"
                 className="!text-theme-color"
               >
-               My Resume
+                My Resume
               </Link>
             </button>
           </ul>

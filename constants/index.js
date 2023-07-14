@@ -49,7 +49,7 @@ export const mySkills = [
 export const experiences = [
   {
     title: "Html, CSS & JS",
-    icon: '/tech/html.png',
+    icon: "/tech/html.png",
     iconBg: "#383E56",
     date: "7-2021 -  2021",
     img: "/udacity certification.png",
@@ -57,31 +57,106 @@ export const experiences = [
   },
   {
     title: "JavaScript",
-    icon: '/tech/javascript.png',
+    icon: "/tech/javascript.png",
     iconBg: "#E6DEDD",
     date: "2021 -  2022",
     img: "/JS certification.jpg",
-    certification_link: "https://www.udemy.com/certificate/UC-f55c74b0-92d4-492c-b0e9-5bfac8908752/"
+    certification_link:
+      "https://www.udemy.com/certificate/UC-f55c74b0-92d4-492c-b0e9-5bfac8908752/",
   },
   {
     title: "React.js",
-    icon: '/tech/reactjs.png',
+    icon: "/tech/reactjs.png",
     iconBg: "#383E56",
     date: " 2022 -  2023",
     img: "/React Certification.jpg",
-    certification_link:"https://www.udemy.com/certificate/UC-08a4dda0-2560-40f8-9541-e7602dcdc4a6/",
+    certification_link:
+      "https://www.udemy.com/certificate/UC-08a4dda0-2560-40f8-9541-e7602dcdc4a6/",
   },
   {
     title: "Front-end course",
-    icon:'/tech/html.png',
+    icon: "/tech/html.png",
     iconBg: "#383E56",
     date: " 2022 -  2023",
     img: "/hasoub certification.png",
-    certification_link:"https://academy.hsoub.com/certificate/EGJEA4XCERP1JUF76BMV8VPR.pdf",
+    certification_link:
+      "https://academy.hsoub.com/certificate/EGJEA4XCERP1JUF76BMV8VPR.pdf",
   },
 ];
 
 export const projects = [
+  {
+    name: "Translate easy",
+    description:
+      "Translate-easy is an NPM package that I've built, which allows for easy integration of Google's Translation API into web applications. It provides customizable components such as LanguageProvider, LanguageSelector, and Translate, making it simple to add language translation capabilities to your web apps.",
+    tags: [
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind css",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "/translate-easy.png",
+    isFeatured:true,
+    source_code_link: "https://github.com/OsamaHIma/translate-easy",
+    live_preview: "https://medicalty.vercel.app/",
+  },
+  {
+    name: "Worker",
+    description:
+      "This is a company dashboard web application built using Next.js 13, Tailwind CSS, and Next-Auth for authentication. The dashboard allows the company to manage and control various aspects of their system.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Next-auth",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Chart.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind css",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "/worker.png",
+    source_code_link: "https://github.com/OsamaHIma/worker-app",
+    live_preview: "https://worker-web.vercel.app/",
+  },
+  {
+    name: "MEDICALTY",
+    description:
+      "MEDICALTY is a software program that aims to move away from using paper-based patient files and convert them into electronic files that are easily stored and printable. The project manager can monitor and track doctors, their records, information, and describe the project staff. Additionally, users can track patients' records and reports through the program.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Stripe",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Next-auth",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind css",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "/medicality.png",
+    isFeatured:true,
+    source_code_link: "https://github.com/OsamaHIma/MEDICALTY",
+    live_preview: "https://medicalty.vercel.app/",
+  },
   {
     name: "Crown Store",
     description:
@@ -244,6 +319,7 @@ export const projects = [
       },
     ],
     image: "/three.js web.png",
+    isFeatured:true,
     source_code_link: "https://github.com/OsamaHIma/ThreeJs-Shirt",
     live_preview: "https://3d-shirt-osamahima.vercel.app/",
   },

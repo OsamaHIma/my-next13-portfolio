@@ -22,11 +22,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        ...colors,
-        "theme-color": "#9d00ff",
-      },
-      backgroundColor: {
-        ...backgroundColor,
         "theme-color": "#9d00ff",
         "main-color": "#0a192f",
       },

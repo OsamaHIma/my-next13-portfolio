@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { styles } from "./styles";
+import { MessagesSquare, User, MailIcon } from "lucide-react";
 
 const Contact = () => {
   const formRef = useRef();
@@ -89,7 +90,7 @@ const Contact = () => {
           transition={{ duration: 1, type: "spring" }}
           className={` ${styles.sectionHeadText} mb-24 font-bold`}
         >
-         <span className="text-theme-color">04.</span> Get in Touch
+          <span className="text-theme-color">04.</span> Get in Touch
         </motion.h1>
       </div>
       <motion.div
@@ -104,41 +105,56 @@ const Contact = () => {
           noValidate
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name:</span>
-            <input
-              type="text"
-              name="name"
-              autoComplete="on"
-              required
-              minLength={4}
-              onChange={handelChange}
-              placeholder="relax and try to remember"
-              className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
+            <div className="text-white font-medium mb-4">
+              <span>Your Name:</span>
+            </div>
+            <div className="relative">
+              <input
+                type="text"
+                name="name"
+                autoComplete="on"
+                required
+                minLength={4}
+                onChange={handelChange}
+                placeholder="Relax and try to remember"
+                className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+              <User className="text-theme-color absolute top-4 right-3" />
+            </div>
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email:</span>
-            <input
-              type="email"
-              name="email"
-              required
-              autoComplete="on"
-              onChange={handelChange}
-              placeholder="Whats's your email?"
-              className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
+            <div className="text-white font-medium mb-4">
+              <span>Your Email:</span>
+            </div>
+            <div className="relative">
+              <input
+                type="email"
+                name="email"
+                required
+                autoComplete="on"
+                onChange={handelChange}
+                placeholder="Whats's your email?"
+                className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+              <MailIcon className="text-theme-color absolute top-4 right-3" />
+            </div>
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message:</span>
-            <textarea
-              rows="7"
-              name="message"
-              required
-              onChange={handelChange}
-              minLength={6}
-              placeholder="Finally What do you wanna say?"
-              className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
+            <div className="text-white font-medium mb-4">
+              <span>Your Message:</span>{" "}
+            </div>
+            <div className="relative">
+              <textarea
+                rows="7"
+                name="message"
+                required
+                onChange={handelChange}
+                minLength={6}
+                placeholder="Finally What do you wanna say?"
+                className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+              <MessagesSquare className="text-theme-color absolute top-4 right-3" />
+            </div>
           </label>
 
           <button

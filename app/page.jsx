@@ -5,7 +5,7 @@ import SocialIcons from "@/components/SocialIcons";
 import AboutMe from "@/sections/AboutMe";
 import Work from "@/sections/work/Work";
 import Contact from "@/sections/Contact";
-import Experience from "@/sections/Experiance";
+import Experience from "@/sections/Experience";
 
 const Home = () => {
   return (
