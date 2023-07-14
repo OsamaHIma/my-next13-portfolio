@@ -8,7 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { experiences } from "@/constants";
 import { styles } from "./styles";
-import { AlignRightIcon, Calendar, Code, MapPin, MoveHorizontal } from "lucide-react";
+import { AlignRightIcon, Calendar, Code, MapPin } from "lucide-react";
 
 const Experience = () => {
   const ExperienceCard = ({ experience }) => (
@@ -58,7 +58,7 @@ const Experience = () => {
       >
         <p className={`${styles.sectionSubText}`}>What I have learned so far</p>
         <h2 className={`${styles.sectionHeadText}`}>
-          <span className="text-theme-color">02.</span> My Certifications.
+          <span className="text-theme-color">02.</span> My Experiences.
         </h2>
       </motion.div>
       <div className="flex flex-col mt-20">

@@ -102,7 +102,7 @@ export const projects = [
     image: "/translate-easy.png",
     isFeatured:true,
     source_code_link: "https://github.com/OsamaHIma/translate-easy",
-    live_preview: "https://medicalty.vercel.app/",
+    live_preview: "https://www.npmjs.com/package/translate-easy?activeTab=readme",
   },
   {
     name: "Worker",
