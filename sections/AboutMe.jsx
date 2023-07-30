@@ -37,13 +37,13 @@ const AboutMe = () => {
                   margin: 0,
                   overflow: "hidden",
                 }}
-                src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFZy_eOTcg&#x2F;view?embed"
+                src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFom-NR5xQ&#x2F;view?embed"
                 allowFullScreen="allowfullscreen"
                 allow="fullscreen"
               ></iframe>
             </div>
             <p className="text-slate-600 dark:text-slate-400 font-medium tracking-wider leading-7">
-              Hello! I&apos;m Osama, I am passionate about creating digital
+              I am passionate about creating digital
               content for the web. My interest in web development was sparked in
               2021.
             </p>

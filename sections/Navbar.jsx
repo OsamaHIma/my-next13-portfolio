@@ -149,7 +149,7 @@ const Navbar = () => {
               >
                 <Link
                   target="_blank"
-                  href="https://drive.google.com/file/d/1J195TxdC3IrJaO75RGLB79ADErtk49W5/view?usp=share_link"
+                  href="https://drive.google.com/file/d/1U9RZB4ZQ2EpwKdj988bsUFa8q7K9vtYh/view?usp=drive_link"
                   className={`text-theme-color ${scrolled && "!text-slate-50"}`}
                 >
                   My Resume
@@ -190,7 +190,7 @@ const Navbar = () => {
             >
               <Link
                 target="_blank"
-                href="https://drive.google.com/file/d/1J195TxdC3IrJaO75RGLB79ADErtk49W5/view?usp=share_link"
+                href="https://drive.google.com/file/d/1U9RZB4ZQ2EpwKdj988bsUFa8q7K9vtYh/view?usp=drive_link"
                 className="!text-theme-color"
               >
                 My Resume

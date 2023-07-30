@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="">
         <h3 className="text-3xl md:text-7xl font-medium relative">
           <span className="text-slate-50">Front-end Developer</span>
-          <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 top-0 -left-3" />
+          <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 md:top-0 -left-3" />
         </h3>
       </div>
       <p className="font-semibold text-gray-600 dark:text-gray-300 leading-8 mt-2 text-[18px]">
