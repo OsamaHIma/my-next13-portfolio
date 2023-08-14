@@ -1,6 +1,7 @@
 "use client";
 import { mySkills } from "@/constants";
 import { motion } from "framer-motion";
+import { Translate } from "translate-easy";
 
 const AboutMe = () => {
   return (
@@ -18,8 +19,9 @@ const AboutMe = () => {
         }}
       >
         <div className="title relative mb-8 font-bold">
-          <h2 className="text-4xl dark:text-slate-300 after:w-80 after:ml-72 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block">
-            <span className="text-theme-color">01.</span> About Me
+          <h2 className="text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-72 rtl:after:mr-60 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block">
+            <span className="text-theme-color">01.</span>{" "}
+            <Translate translations={{ ar: "نبذة عني" }}>About Me</Translate>
           </h2>
         </div>
         <div className="grid gap-4">
@@ -43,12 +45,17 @@ const AboutMe = () => {
               ></iframe>
             </div>
             <p className="text-slate-600 dark:text-slate-400 font-medium tracking-wider leading-7">
-              I am passionate about creating digital
-              content for the web. My interest in web development was sparked in
-              2021.
+              <Translate>
+                I am passionate about creating digital content for the web.
+              </Translate>
+              <Translate>
+                My interest in web development was sparked in 2021.
+              </Translate>
             </p>
             <p className="text-slate-600 dark:text-slate-400 font-medium tracking-wider leading-7">
-              Here are a few technologies I’ve been working with recently:
+              <Translate>
+                Here are a few technologies I’ve been working with recently:
+              </Translate>
             </p>
             <ul className="grid grid-cols-[33%,33%,33%]">
               {mySkills.map((skill, index) => (

@@ -5,6 +5,7 @@ import { GithubIcon, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import "./work.scss";
+import { Translate } from "translate-easy";
 
 const Work = () => {
   return (
@@ -20,8 +21,11 @@ const Work = () => {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2 className={`text-2xl md:text-4xl dark:text-slate-300 after:w-80 after:ml-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block`}>
-          <span className={`text-theme-color`}>03.</span> Projects I&apos;v built
+        <h2
+          className={`text-2xl md:text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-96 rtl:after:mr-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block`}
+        >
+          <span className={`text-theme-color`}>03.</span>{" "}
+          <Translate>Projects I&apos;v built</Translate>
         </h2>
       </motion.div>
       <div className="projects-container">
@@ -33,7 +37,7 @@ const Work = () => {
             source_code_link,
             name,
             tags,
-            isFeatured
+            isFeatured,
           }) => {
             return (
               <motion.div
@@ -47,22 +51,27 @@ const Work = () => {
                   visible: { opacity: 1, y: -50 },
                   hidden: { opacity: 0, y: 0 },
                 }}
+                dir="ltr"
               >
                 <div className="project-image rounded-lg">
                   <Link href={live_preview} target="_blank">
                     <div className="project-image-overlay"></div>
                     <div className="project-image-container">
-                      <Image src={image} fill alt={name} quality={100}/>
+                      <Image src={image} fill alt={name} quality={100} />
                     </div>
                   </Link>
                 </div>
                 <div className="project-info rounded-lg">
-                  <p className="project-info-overline">{isFeatured && "Featured Project"}</p>
+                  <p className="project-info-overline">
+                    {isFeatured && "Featured Project"}
+                  </p>
                   <h3 className="project-info-title lg:text-slate-600 font-semibold text-3xl md:text-5xl dark:text-slate-300">
                     {name}
                   </h3>
                   <div className="project-info-description">
-                    <p>{description}</p>
+                    <p>
+                      <Translate>{description}</Translate>
+                    </p>
                   </div>
                   <ul className="project-info-tech-list">
                     {tags.map((tag) => (

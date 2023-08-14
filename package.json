@@ -22,7 +22,8 @@
     "react-cursor-follow": "^2.0.0",
     "react-dom": "18.2.0",
     "react-toastify": "^9.1.2",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-vertical-timeline-component": "^3.6.0",
+    "translate-easy": "^1.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

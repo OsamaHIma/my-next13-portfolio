@@ -14,18 +14,21 @@ import {
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Translate, useLanguage } from "translate-easy";
+import LanguageSelector from "@/components/LangugeSelector";
 
 // h- stands for header-
 const Navbar = () => {
   const { setTheme } = useTheme();
   const [showThemeMenu, setThemeMenu] = useState("-top-[400px]");
-  const [showMenu, setMenu] = useState("-right-[400px]");
+  const [showMenu, setMenu] = useState("ltr:-right-[400px] rtl:-left-[400px]");
   const [scrolled, setScrolled] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
+
   // theme Menu toggler button
   const openThemeMenu = () => {
-    if (showMenu === "right-0") {
-      setMenu("-right-[400px]");
+    if (showMenu === "ltr:right-0 rtl:left-0") {
+      setMenu("ltr:-right-[400px] rtl:-left-[400px]");
     }
 
     if (showThemeMenu === "top-[17%]") {
@@ -34,18 +37,20 @@ const Navbar = () => {
       setThemeMenu("top-[17%]");
     }
   };
+
   // Menu toggler button
   const openMenu = () => {
     if (showThemeMenu === "top-[17%]") {
       setThemeMenu("-top-[400px]");
     }
 
-    if (showMenu === "right-0") {
-      setMenu("-right-[400px]");
+    if (showMenu === "ltr:right-0 rtl:left-0") {
+      setMenu("ltr:-right-[400px] rtl:-left-[400px]");
     } else {
-      setMenu("right-0");
+      setMenu("ltr:right-0 rtl:left-0");
     }
   };
+
   // toggle Maximize
   const handelMaximize = (event) => {
     event.preventDefault();
@@ -88,7 +93,7 @@ const Navbar = () => {
         className="h-container relative py-4 flexCenter !flex-nowrap border-b-[3px] border-slate-300 dark:border-indigo-400 !justify-between innerWidth"
       >
         <Link href="/">
-          <h1 className="font-bold md:text-xl">
+          <h1 className="font-bold md:text-xl" dir="ltr">
             <ChevronLeftIcon className="inline text-theme-color" size={37} />
             OSAMA IBRAHIM <span className="text-md">/</span>
             <ChevronRightIcon className="inline text-theme-color" size={37} />
@@ -99,11 +104,14 @@ const Navbar = () => {
           <button className="mx-4" onClick={openThemeMenu}>
             <Moon className="rotate-90 hidden transition-all hover:text-slate-900 dark:rotate-0 dark:block dark:saturate-100 dark:text-slate-400 dark:hover:text-slate-100" />
             <Sun className="rotate-0 block transition-all hover:text-slate-900 dark:rotate-90 dark:hidden dark:text-slate-400 dark:hover:text-slate-100" />
-            <span className="sr-only">Toggle theme menu</span>
+            <span className="sr-only">
+              <Translate>Toggle theme menu</Translate>
+            </span>
           </button>
 
           <ul
-            className={`${showThemeMenu} menuTransition flex w-[9rem] absolute right-0 md:right-[60%] z-10 flex-col m-8 shadow-lg select-none`}
+            className={`${showThemeMenu} menuTransition flex w-[9rem] absolute right-0 ltr:md:right-[80%] rtl:md:left-[80%] z-10 flex-col m-8 shadow-lg select-none`}
+            dir="ltr"
           >
             <li
               className="bg-theme-color pb-2 pt-4 rounded-t-md px-8 cursor-pointer text-slate-200 hover:text-slate-50"
@@ -129,15 +137,36 @@ const Navbar = () => {
           </ul>
 
           {/* for large screens */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <ul className="h-menu flexCenter !gap-8">
+              <LanguageSelector />
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={`#${link.id}`} title={link.name}>
                     <span className="font-semibold mx-2 text-theme-color">
                       0{index + 1}.
                     </span>
-                    {link.name}
+                    {/* <Translate
+                      customTranslations={{
+                        "About Me": {
+                          ar: "نبذه عني",
+                        },
+                      }}
+                    > */}
+                    {link.name === "About Me" ? (
+                      <Translate translations={{ ar: "نبذه عني" }}>
+                        {link.name}
+                      </Translate>
+                    ) : (
+                      <Translate>{link.name}</Translate>
+                    )}
+                    {/* {link.name === "My Experience" ? (
+                      <Translate translations={{ ar: "خبرتي" }}>
+                        {link.name}
+                      </Translate>
+                    ) : (
+                      <Translate>{link.name}</Translate>
+                    )} */}
                   </Link>
                 </li>
               ))}
@@ -152,11 +181,11 @@ const Navbar = () => {
                   href="https://drive.google.com/file/d/1U9RZB4ZQ2EpwKdj988bsUFa8q7K9vtYh/view?usp=drive_link"
                   className={`text-theme-color ${scrolled && "!text-slate-50"}`}
                 >
-                  My Resume
+                  <Translate>My Resume</Translate>
                 </Link>
               </button>
               <button
-                className="mr-4 transition-all ease-in-out"
+                className="ltr:mr-4 rtl:ml-4 transition-all ease-in-out"
                 onClick={handelMaximize}
                 title="Toggle maximize and minimize screen"
               >
@@ -166,21 +195,32 @@ const Navbar = () => {
           </div>
 
           {/* for medium and small screens */}
-          <button className="mx-4 block lg:hidden" onClick={openMenu}>
+          <button className="mx-4 block xl:hidden" onClick={openMenu}>
             <MenuIcon className="hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100" />
-            <span className="sr-only">Toggle menu</span>
+            <span className="sr-only">
+              <Translate>Toggle menu</Translate>
+            </span>
           </button>
 
           <ul
-            className={`flex lg:hidden !text-white font-medium menuTransition ${showMenu} absolute bg-slate-900 py-8 px-11 rounded-lg w-[15rem] top-[27%] z-10 flex-col m-8 shadow-lg`}
+            className={`flex xl:hidden !text-white font-medium menuTransition ${showMenu} absolute bg-slate-900 py-8 px-11 rounded-lg w-[15rem] top-[27%] z-10 flex-col m-8 shadow-lg`}
           >
+            <LanguageSelector />
             {navLinks.map((link, index) => (
               <li key={index} className="my-3" title={link.name}>
                 <Link href={`#${link.id}`}>
                   <span className="font-semibold mx-2 text-theme-color">
                     0{index + 1}.
                   </span>
-                  {link.name}
+                  <Translate
+                    customTranslations={{
+                      "About Me": {
+                        ar: "نبذه عني",
+                      },
+                    }}
+                  >
+                    {link.name}
+                  </Translate>
                 </Link>
               </li>
             ))}
@@ -193,7 +233,7 @@ const Navbar = () => {
                 href="https://drive.google.com/file/d/1U9RZB4ZQ2EpwKdj988bsUFa8q7K9vtYh/view?usp=drive_link"
                 className="!text-theme-color"
               >
-                My Resume
+                <Translate>My Resume</Translate>
               </Link>
             </button>
           </ul>

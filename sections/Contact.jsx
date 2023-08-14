@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { styles } from "./styles";
 import { MessagesSquare, User, MailIcon } from "lucide-react";
+import { Translate } from "translate-easy";
 
 const Contact = () => {
   const formRef = useRef();
@@ -50,9 +51,9 @@ const Contact = () => {
           setLoading(false);
           toast.success(
             <p>
-              Thank you
+              <Translate>Thank you</Translate>
               <span className="text-[#52ee4d] font-extrabold">{Form.name}</span>
-              !, I&apos;ve got your message and I&apos;ll reach out to you soon.
+              !, <Translate>I&apos;ve got your message and I&apos;ll reach out to you soon</Translate>.
             </p>,
             {
               position: "top-right",
@@ -70,9 +71,9 @@ const Contact = () => {
           setLoading(false);
           toast.error(
             <p>
-              Sorry{" "}
+              <Translate>Sorry</Translate>{" "}
               <span className="text-[#ee524d] font-extrabold">{Form.name}</span>{" "}
-              something went wrong.
+              <Translate>something went wrong</Translate>.
             </p>
           );
           console.error(err);
@@ -90,14 +91,14 @@ const Contact = () => {
           transition={{ duration: 1, type: "spring" }}
           className={` ${styles.sectionHeadText} mb-24 font-bold`}
         >
-          <span className="text-theme-color">04.</span> Get in Touch
+          <span className="text-theme-color">04.</span> <Translate>Get in Touch</Translate>
         </motion.h1>
       </div>
       <motion.div
         // variants={slideIn("right", "tween", 0.2, 1)}
         className=" w-[80%] mx-auto bg-[#100d25] p-8 rounded-2xl"
       >
-        <h3 className="text-3xl mx-auto text-stone-50 ">Contact.</h3>
+        <h3 className="text-3xl mx-auto text-stone-50 "><Translate>Contact</Translate>.</h3>
         <form
           ref={formRef}
           className={`flex flex-col gap-8 mt-12 ${validated}`}
@@ -106,7 +107,7 @@ const Contact = () => {
         >
           <label className="flex flex-col">
             <div className="text-white font-medium mb-4">
-              <span>Your Name:</span>
+              <span><Translate>Your Name</Translate>:</span>
             </div>
             <div className="relative">
               <input
@@ -119,12 +120,12 @@ const Contact = () => {
                 placeholder="Relax and try to remember"
                 className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
-              <User className="text-theme-color absolute top-4 right-3" />
+              <User className="text-theme-color absolute top-4 ltr:right-3 rtl:left-3" />
             </div>
           </label>
           <label className="flex flex-col">
             <div className="text-white font-medium mb-4">
-              <span>Your Email:</span>
+              <span><Translate>Your Email</Translate>:</span>
             </div>
             <div className="relative">
               <input
@@ -136,12 +137,12 @@ const Contact = () => {
                 placeholder="Whats's your email?"
                 className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
-              <MailIcon className="text-theme-color absolute top-4 right-3" />
+              <MailIcon className="text-theme-color absolute top-4 ltr:right-3 rtl:left-3" />
             </div>
           </label>
           <label className="flex flex-col">
             <div className="text-white font-medium mb-4">
-              <span>Your Message:</span>{" "}
+              <span><Translate>Your Message</Translate>:</span>{" "}
             </div>
             <div className="relative">
               <textarea
@@ -153,7 +154,7 @@ const Contact = () => {
                 placeholder="Finally What do you wanna say?"
                 className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
-              <MessagesSquare className="text-theme-color absolute top-4 right-3" />
+              <MessagesSquare className="text-theme-color absolute top-4 ltr:right-3 rtl:left-3" />
             </div>
           </label>
 

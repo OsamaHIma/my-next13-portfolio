@@ -9,6 +9,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "@/constants";
 import { styles } from "./styles";
 import { AlignRightIcon, Calendar, Code, MapPin } from "lucide-react";
+import { Translate } from "translate-easy";
 
 const Experience = () => {
   const ExperienceCard = ({ experience }) => (
@@ -56,12 +57,17 @@ const Experience = () => {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <p className={`${styles.sectionSubText}`}>What I have learned so far</p>
-        <h2 className={`${styles.sectionHeadText}`}>
-          <span className="text-theme-color">02.</span> My Certificates.
+        <p className={`${styles.sectionSubText}`}>
+          <Translate>What I have learned so far</Translate>
+        </p>
+        <h2
+          className={`text-2xl md:text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-96 rtl:after:mr-72 after:top-7 after:h-[2px] after:bg-slate-400 after:absolute after:block`}
+        >
+          <span className="text-theme-color">02.</span>{" "}
+          <Translate>My Certificates</Translate>.
         </h2>
       </motion.div>
-      <div className="flex flex-col mt-20">
+      <div className="flex flex-col mt-20" dir="ltr">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
@@ -71,7 +77,7 @@ const Experience = () => {
       <div className="bg-slate-100 dark:bg-[#10284b] shadow-lg rounded-lg overflow-hidden">
         <div className="px-6 py-4">
           <h1 className="font-bold text-3xl mb-7 text-center">
-            My work experience
+            <Translate>My work experience</Translate>
           </h1>
           <div className="flex items-center mb-4">
             <Code className="text-theme-color mr-2 text-4xl" />
@@ -87,58 +93,79 @@ const Experience = () => {
           <div className="flex items-center mb-4">
             <MapPin className="text-gray-500 mr-2 text-lg" />
             <span className="text-gray-600 dark:text-gray-300 font-medium text-sm">
-              Etrevago, Jordan (Remotely)
+              Etrevago, <Translate>Jordan</Translate> (
+              <Translate>Remotely</Translate>)
             </span>
           </div>
           <ul className="list-disc list-inside mb-8">
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Collaborated with back-end and front-end teams to develop and
-              maintain web applications using JavaScript, HTML, CSS, and Next.js
+              <Translate>
+                Collaborated with back-end and front-end teams to develop and
+                maintain web applications using JavaScript, HTML, CSS, and
+                Next.js
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Worked with APIs to integrate third-party services, such as
-              payment gateways and social media platforms, into web applications
+              <Translate>
+                Worked with APIs to integrate third-party services, such as
+                payment gateways and social media platforms, into web
+                applications
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Reviewed code written by interns, providing actionable feedback
-              and suggestions for improvement to ensure code quality and
-              maintainability
+              <Translate>
+                Reviewed code written by interns, providing actionable feedback
+                and suggestions for improvement to ensure code quality and
+                maintainability
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Troubleshot and debugged issues in web applications, both
-              independently and in collaboration with other developers, to
-              ensure optimal user experience
+              <Translate>
+                Troubleshot and debugged issues in web applications, both
+                independently and in collaboration with other developers, to
+                ensure optimal user experience
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Developed and implemented responsive design principles to ensure
-              web applications were accessible on a range of devices, including
-              desktop and mobile
+              <Translate>
+                Developed and implemented responsive design principles to ensure
+                web applications were accessible on a range of devices,
+                including desktop and mobile
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Became proficient with Next.js and new packages, such as
-              styled-components and react-query, to improve application
-              performance and user experience
+              <Translate>
+                Became proficient with Next.js and new packages, such as
+                styled-components and react-query, to improve application
+                performance and user experience
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Developed communication and teamwork skills in a remote work
-              environment, collaborating with developers, project managers, and
-              clients across different time zones
+              <Translate>
+                Developed communication and teamwork skills in a remote work
+                environment, collaborating with developers, project managers,
+                and clients across different time zones
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Demonstrated adaptability and flexibility by working on multiple
-              projects simultaneously and adjusting to changing project
-              requirements and timelines
+              <Translate>
+                Demonstrated adaptability and flexibility by working on multiple
+                projects simultaneously and adjusting to changing project
+                requirements and timelines
+              </Translate>
             </li>
             <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              Maintained knowledge of emerging technologies and industry trends
-              through self-directed learning and professional development
-              activities
+              <Translate>
+                Maintained knowledge of emerging technologies and industry
+                trends through self-directed learning and professional
+                development activities
+              </Translate>
             </li>
           </ul>
           <div className="flex items-center">
             <Code className="text-theme-color mr-2 text-xl" />
             <span className="text-gray-500 dark:text-gray-300 font-medium text-lg">
-              Technologies:
+              <Translate>Technologies</Translate>:
             </span>
             <span className="text-gray-600 dark:text-gray-300 font-medium text-lg ml-2">
               JavaScript, HTML, CSS, Next.js, Tailwind CSS, React.js

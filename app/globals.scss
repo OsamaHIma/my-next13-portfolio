@@ -65,7 +65,16 @@ html {
 .menuTransition {
   transition: 0.4s all ease-in-out;
 }
-
+.LanguageSelectorMenu::-webkit-scrollbar {
+  height: 100%;
+  width: 13px !important;
+}
+.LanguageSelectorMenu::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 rounded-md;
+}
+.LanguageSelectorMenu::-webkit-scrollbar-track {
+  background-color: transparent;
+}
 .paddings {
   padding: 1.5rem;
 }

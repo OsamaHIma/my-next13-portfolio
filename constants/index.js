@@ -3,19 +3,19 @@ import { FacebookIcon, LinkedinIcon, GithubIcon } from "lucide-react";
 export const navLinks = [
   {
     id: "about",
-    name: "About",
+    name: "About Me",
   },
   {
     id: "experience",
-    name: "Experience",
+    name: "My Experience",
   },
   {
     id: "work",
-    name: "Work",
+    name: "My Work",
   },
   {
     id: "contact",
-    name: "Contact",
+    name: "Contact Me",
   },
 ];
 
@@ -88,21 +88,20 @@ export const projects = [
   {
     name: "Translate easy",
     description:
-      "Translate-easy is an NPM package that I've built, which allows for easy integration of Google's Translation API into web applications. It provides customizable components such as LanguageProvider, LanguageSelector, and Translate, making it simple to add language translation capabilities to your web apps.",
+      "Translate-easy is an NPM package that I've built and it's the package that I'm using in my portfolio to handle the translations, which allows for easy integration of Google's Translation API into web applications. It provides customizable components such as LanguageProvider, LanguageSelector, and Translate, making it simple to add language translation capabilities to your web apps.",
     tags: [
       {
         name: "TypeScript",
-        color: "blue-text-gradient",
       },
       {
         name: "Tailwind css",
-        color: "green-text-gradient",
       },
     ],
     image: "/translate-easy.png",
-    isFeatured:true,
+    isFeatured: true,
     source_code_link: "https://github.com/OsamaHIma/translate-easy",
-    live_preview: "https://www.npmjs.com/package/translate-easy?activeTab=readme",
+    live_preview:
+      "https://www.npmjs.com/package/translate-easy?activeTab=readme",
   },
   {
     name: "Worker",
@@ -111,19 +110,15 @@ export const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Next-auth",
-        color: "green-text-gradient",
       },
       {
         name: "Chart.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Tailwind css",
-        color: "green-text-gradient",
       },
     ],
     image: "/worker.png",
@@ -137,23 +132,19 @@ export const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Stripe",
-        color: "green-text-gradient",
       },
       {
         name: "Next-auth",
-        color: "blue-text-gradient",
       },
       {
         name: "Tailwind css",
-        color: "green-text-gradient",
       },
     ],
     image: "/medicality.png",
-    isFeatured:true,
+    isFeatured: true,
     source_code_link: "https://github.com/OsamaHIma/MEDICALTY",
     live_preview: "https://medicalty.vercel.app/",
   },
@@ -164,32 +155,51 @@ export const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Stripe",
-        color: "green-text-gradient",
       },
       {
         name: "Sanity",
-        color: "pink-text-gradient",
       },
       {
         name: "Firebase",
-        color: "blue-text-gradient",
       },
       {
         name: "Tailwind css",
-        color: "green-text-gradient",
       },
       {
         name: "Redux toolkit",
-        color: "pink-text-gradient",
       },
     ],
     image: "/crwn store.png",
     source_code_link: "https://github.com/OsamaHIma/ecommerce-next13",
     live_preview: "https://crown-store-next13.vercel.app/",
+  },
+  {
+    name: "Refilex",
+    description:
+      `A redesigned website for "Refilex" company using next.js and react-three-fiber`,
+    tags: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "Framer Motion",
+      },
+      {
+        name: "Tailwindcss",
+      },
+      {
+        name: "react-three-fiber",
+      },
+      {
+        name: "three.js",
+      },
+    ],
+    image: "/refilex.png",
+    source_code_link: "https://github.com/OsamaHIma/Refilex-web",
+    live_preview: "https://refilex-web.vercel.app/",
   },
   {
     name: "Metaversus",
@@ -198,15 +208,12 @@ export const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Framer Motion",
-        color: "green-text-gradient",
       },
       {
         name: "Tailwindcss",
-        color: "pink-text-gradient",
       },
     ],
     image: "/metaversus.png",
@@ -220,15 +227,12 @@ export const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
       },
       {
         name: "MUI",
-        color: "green-text-gradient",
       },
       {
         name: "Nivo charts",
-        color: "pink-text-gradient",
       },
     ],
     image: "/dashboard.png",
@@ -242,15 +246,12 @@ export const projects = [
     tags: [
       {
         name: "Three.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Bootstrap",
-        color: "green-text-gradient",
       },
       {
         name: "SCSS",
-        color: "pink-text-gradient",
       },
     ],
     image: "/my portfolio.png",
@@ -263,15 +264,12 @@ export const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Framer motion",
-        color: "green-text-gradient",
       },
       {
         name: "Tailwindcss",
-        color: "pink-text-gradient",
       },
     ],
     image: "/real-estate.png",
@@ -285,15 +283,12 @@ export const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Firebase",
-        color: "green-text-gradient",
       },
       {
         name: "Tailwindcss",
-        color: "pink-text-gradient",
       },
     ],
     image: "/safirni.png",
@@ -307,19 +302,16 @@ export const projects = [
     tags: [
       {
         name: "React.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Three.js",
-        color: "green-text-gradient",
       },
       {
         name: "React-three-fiber",
-        color: "pink-text-gradient",
       },
     ],
     image: "/three.js web.png",
-    isFeatured:true,
+    isFeatured: true,
     source_code_link: "https://github.com/OsamaHIma/ThreeJs-Shirt",
     live_preview: "https://3d-shirt-osamahima.vercel.app/",
   },
@@ -330,15 +322,12 @@ export const projects = [
     tags: [
       {
         name: "React.js",
-        color: "blue-text-gradient",
       },
       {
         name: "Bootstrap",
-        color: "green-text-gradient",
       },
       {
         name: "React-router",
-        color: "pink-text-gradient",
       },
     ],
     image: "/tarkez.png",
@@ -353,15 +342,12 @@ export const projects = [
     tags: [
       {
         name: "Html",
-        color: "blue-text-gradient",
       },
       {
         name: "Bootstrap",
-        color: "green-text-gradient",
       },
       {
         name: "CSS",
-        color: "pink-text-gradient",
       },
     ],
     image: "/youtubey.png",
