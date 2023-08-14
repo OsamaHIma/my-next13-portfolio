@@ -110,7 +110,7 @@ const Navbar = () => {
           </button>
 
           <ul
-            className={`${showThemeMenu} menuTransition flex w-[9rem] absolute right-0 ltr:md:right-[80%] rtl:md:left-[80%] z-10 flex-col m-8 shadow-lg select-none`}
+            className={`${showThemeMenu} menuTransition flex w-[9rem] absolute ltr:right-0 rtl:left-0 ltr:md:right-[80%] rtl:md:left-[80%] z-10 flex-col m-8 shadow-lg select-none`}
             dir="ltr"
           >
             <li
