@@ -46,6 +46,54 @@ export const mySkills = [
   "Tailwind css",
 ];
 
+export const workSkills = [
+  {
+    skill: `Collaborated with back-end and front-end teams to develop and
+  maintain web applications using JavaScript, HTML, CSS, and
+  Next.js`,
+  },
+  {
+    skill: `Worked with APIs to integrate third-party services, such as
+  payment gateways and social media platforms, into web
+  applications`,
+  },
+  {
+    skill: `Reviewed code written by interns, providing actionable feedback
+  and suggestions for improvement to ensure code quality and
+  maintainability`,
+  },
+  {
+    skill: `Troubleshot and debugged issues in web applications, both
+  independently and in collaboration with other developers, to
+  ensure optimal user experience`,
+  },
+  {
+    skill: `Developed and implemented responsive design principles to ensure
+  web applications were accessible on a range of devices,
+  including desktop and mobile`,
+  },
+  {
+    skill: `Became proficient with Next.js and new packages, such as
+  next-auth and framer-motion, to improve application
+  performance and user experience`,
+  },
+  {
+    skill: `Developed communication and teamwork skills in a remote work
+  environment, collaborating with developers, project managers,
+  and clients across different time zones`,
+  },
+  {
+    skill: `Demonstrated adaptability and flexibility by working on multiple
+  projects simultaneously and adjusting to changing project
+  requirements and timelines`,
+  },
+  {
+    skill: `Maintained knowledge of emerging technologies and industry
+  trends through self-directed learning and professional
+  development activities`,
+  },
+];
+
 export const experiences = [
   {
     title: "Html, CSS & JS",
@@ -178,8 +226,7 @@ export const projects = [
   },
   {
     name: "Refilex",
-    description:
-      `A redesigned website for "Refilex" company using next.js and react-three-fiber`,
+    description: `A redesigned website for "Refilex" company using next.js and react-three-fiber`,
     tags: [
       {
         name: "Next.js",

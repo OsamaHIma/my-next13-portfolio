@@ -45,7 +45,7 @@ const Work = () => {
                 key={name}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 variants={{
                   visible: { opacity: 1, y: -50 },

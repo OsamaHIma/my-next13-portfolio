@@ -1,11 +1,27 @@
 "use client";
 import { mySkills } from "@/constants";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Translate } from "translate-easy";
 
 const AboutMe = () => {
+  const secRef = useRef(null);
+
+  // ScrollYProgress is a value between 0 and 1
+  const { scrollYProgress } = useScroll({
+    //target is the element that we want to track
+    target: secRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
+  const xTransform = useTransform(
+    scrollYProgress,
+    [1, 0.5, 0.1, 0],
+    [-1000, 0, 0, 0]
+  );
   return (
-    <section>
+    <section ref={secRef}>
       <motion.div
         className="about mx-16 paddings my-60"
         id="about"
@@ -26,7 +42,13 @@ const AboutMe = () => {
         </div>
         <div className="grid gap-4">
           <div className="flex flex-col gap-4">
-            <div className="cv">
+            <motion.div
+              className="cv"
+              style={{
+                scale: scale,
+                x: xTransform,
+              }}
+            >
               <iframe
                 loading="eager"
                 className="w-[100%] md:w-[65%] rounded-lg"
@@ -43,7 +65,7 @@ const AboutMe = () => {
                 allowFullScreen="allowfullscreen"
                 allow="fullscreen"
               ></iframe>
-            </div>
+            </motion.div>
             <p className="text-slate-600 dark:text-slate-400 font-medium tracking-wider leading-7">
               <Translate>
                 I am passionate about creating digital content for the web.
@@ -59,12 +81,20 @@ const AboutMe = () => {
             </p>
             <ul className="grid grid-cols-[33%,33%,33%]">
               {mySkills.map((skill, index) => (
-                <li
+                <motion.li
+                  initial="hidden"
+                  whileInView="visible"
+                  // viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 * index }}
+                  variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: -50 },
+                  }}
                   key={index}
                   className="leading-10 text-indigo-500 font-medium relative before:content-['▹'] before:absolute before:left-[-20px] before:top-2 before:text-theme-color before:leading-3"
                 >
                   {skill}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>

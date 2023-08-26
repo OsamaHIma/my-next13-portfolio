@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.div>
       )}
 
-      <h1 className="text-theme-color font-medium text-2xl">
+      <h1 className="text-theme-color font-medium text-2xl whitespace-nowrap">
         <Translate translations={{ar:"السلام عليكم أنا"}}>Greetings, my name is</Translate>
       </h1>
       <h2 className="text-3xl md:text-7xl font-semibold">
@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="">
         <h3 className="text-3xl md:text-7xl font-medium relative">
           <span className=" text-gray-400 dark:text-slate-100">Front-end Developer</span>
-          <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 md:top-0 -left-3" />
+          <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 -top-2 md:top-0 -left-3" />
         </h3>
       </div>
       <p className="font-semibold text-gray-600 dark:text-gray-300 leading-8 mt-2 text-[18px]">
@@ -70,7 +70,7 @@ const Hero = () => {
       <Link
         href="https://github.com/OsamaHIma"
         target="_blank"
-        className="btn border-2 border-solid border-theme-color my-4 hover:bg-theme-color !text-theme-color hover:!text-slate-50"
+        className="btn whitespace-nowrap w-fit border-2 border-solid border-theme-color my-4 hover:bg-theme-color !text-theme-color hover:!text-slate-50"
         type="button"
       >
         <Translate translations={{ ar: "ألقي نظرة علي حسابي علي GitHub!" }}>

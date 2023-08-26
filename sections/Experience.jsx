@@ -1,17 +1,18 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import { experiences } from "@/constants";
+import { experiences, workSkills } from "@/constants";
 import { styles } from "./styles";
 import { AlignRightIcon, Calendar, Code, MapPin } from "lucide-react";
 import { Translate } from "translate-easy";
 
 const Experience = () => {
+
   const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
       contentStyle={{ background: "#1e2d47", color: "#fff" }}
@@ -98,69 +99,22 @@ const Experience = () => {
             </span>
           </div>
           <ul className="list-disc list-inside mb-8">
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Collaborated with back-end and front-end teams to develop and
-                maintain web applications using JavaScript, HTML, CSS, and
-                Next.js
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Worked with APIs to integrate third-party services, such as
-                payment gateways and social media platforms, into web
-                applications
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Reviewed code written by interns, providing actionable feedback
-                and suggestions for improvement to ensure code quality and
-                maintainability
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Troubleshot and debugged issues in web applications, both
-                independently and in collaboration with other developers, to
-                ensure optimal user experience
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Developed and implemented responsive design principles to ensure
-                web applications were accessible on a range of devices,
-                including desktop and mobile
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Became proficient with Next.js and new packages, such as
-                styled-components and react-query, to improve application
-                performance and user experience
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Developed communication and teamwork skills in a remote work
-                environment, collaborating with developers, project managers,
-                and clients across different time zones
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Demonstrated adaptability and flexibility by working on multiple
-                projects simultaneously and adjusting to changing project
-                requirements and timelines
-              </Translate>
-            </li>
-            <li className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4">
-              <Translate>
-                Maintained knowledge of emerging technologies and industry
-                trends through self-directed learning and professional
-                development activities
-              </Translate>
-            </li>
+            {workSkills.map(({ skill }, index) => (
+              <motion.li
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 * index }}
+                variants={{
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="text-gray-600 dark:text-gray-300 font-medium text-lg mb-4"
+              >
+                <Translate>{skill}</Translate>
+              </motion.li>
+            ))}
           </ul>
           <div className="flex items-center">
             <Code className="text-theme-color mr-2 text-xl" />
