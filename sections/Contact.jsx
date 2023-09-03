@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { styles } from "./styles";
 import { MessagesSquare, User, MailIcon } from "lucide-react";
 import { Translate } from "translate-easy";
+import { Button, Spinner } from "@material-tailwind/react";
 
 const Contact = () => {
   const formRef = useRef();
@@ -158,12 +159,16 @@ const Contact = () => {
             </div>
           </label>
 
-          <button
+          <Button
             type="submit"
-            className="btn bg-theme-color w-[50%] mx-auto text-white shadow-md"
+            className="bg-theme-color py-3 text-xl w-[40%] mx-auto text-white shadow-md"
           >
-            {loading ? "Sending..." : "Send"}
-          </button>
+            {loading ? (
+              <Spinner color="green" className="mx-auto" />
+            ) : (
+              <Translate translations={{ar:"أرسل"}}>Send</Translate>
+            )}
+          </Button>
         </form>
       </motion.div>
     </section>

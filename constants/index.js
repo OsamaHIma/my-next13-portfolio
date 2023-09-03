@@ -99,7 +99,7 @@ export const experiences = [
     title: "Html, CSS & JS",
     icon: "/tech/html.png",
     iconBg: "#383E56",
-    date: "7-2021 -  2021",
+    date: "7-2022 -  10-2022",
     img: "/udacity certification.png",
     certification_link: "https://graduation.udacity.com/confirm/GUFTCZJD",
   },
@@ -107,7 +107,7 @@ export const experiences = [
     title: "JavaScript",
     icon: "/tech/javascript.png",
     iconBg: "#E6DEDD",
-    date: "2021 -  2022",
+    date: "6-2022 -  11-2022",
     img: "/JS certification.jpg",
     certification_link:
       "https://www.udemy.com/certificate/UC-f55c74b0-92d4-492c-b0e9-5bfac8908752/",
@@ -116,7 +116,7 @@ export const experiences = [
     title: "React.js",
     icon: "/tech/reactjs.png",
     iconBg: "#383E56",
-    date: " 2022 -  2023",
+    date: "1-2023 -  4-2023",
     img: "/React Certification.jpg",
     certification_link:
       "https://www.udemy.com/certificate/UC-08a4dda0-2560-40f8-9541-e7602dcdc4a6/",
@@ -125,7 +125,7 @@ export const experiences = [
     title: "Front-end course",
     icon: "/tech/html.png",
     iconBg: "#383E56",
-    date: " 2022 -  2023",
+    date: "8-2022 -  4-2023",
     img: "/hasoub certification.png",
     certification_link:
       "https://academy.hsoub.com/certificate/EGJEA4XCERP1JUF76BMV8VPR.pdf",
