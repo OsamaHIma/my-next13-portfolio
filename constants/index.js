@@ -171,7 +171,7 @@ export const projects = [
     ],
     image: "/worker.png",
     source_code_link: "https://github.com/OsamaHIma/worker-app",
-    live_preview: "https://worker-web.vercel.app/",
+    live_preview: "https://worker-web.vercel.app/dashboard",
   },
   {
     name: "MEDICALTY",
@@ -194,7 +194,7 @@ export const projects = [
     image: "/medicality.png",
     isFeatured: true,
     source_code_link: "https://github.com/OsamaHIma/MEDICALTY",
-    live_preview: "https://medicalty.vercel.app/",
+    live_preview: "https://medicalty.vercel.app/dashboard",
   },
   {
     name: "Crown Store",
