@@ -80,10 +80,11 @@ const Navbar = () => {
         <nav className="flexCenter gap-2">
           {/* Theme menu */}
           <ThemeSelector />
-          <LanguageSelector />
+          
           {/* for large screens */}
           <div className="hidden xl:block">
             <ul className="h-menu flexCenter !gap-6">
+<LanguageSelector />
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={`#${link.id}`} title={link.name}>
@@ -150,10 +151,11 @@ const Navbar = () => {
               </IconButton>
             </MenuHandler>
 
-            <MenuList className="dark:bg-slate-900 border-0 w-[15rem] flex flex-col xl:hidden text-stone-950 dark:text-stone-50 shadow-lg text-base">
-              {navLinks.map((link, index) => (
+            <MenuList className="dark:bg-slate-900 border-0 w-[15rem] flex gap-1 flex-col xl:hidden text-stone-950 dark:text-stone-50 shadow-lg text-base">
+<LanguageSelector /> 
+             {navLinks.map((link, index) => (
                 <Link key={index} href={`${link.id}`}>
-                  <MenuItem className="hover:!border-0 dark:hover:!bg-gray-100 my-1 text-base">
+                  <MenuItem className="hover:!border-0 dark:hover:!bg-gray-100 text-base">
                     <span className="font-semibold mx-2 text-theme-color">
                       0{index + 1}.
                     </span>
