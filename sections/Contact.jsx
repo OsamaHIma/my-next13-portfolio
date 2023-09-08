@@ -4,9 +4,9 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { styles } from "./styles";
-import { MessagesSquare, User, MailIcon } from "lucide-react";
 import { Translate } from "translate-easy";
-import { Button, Spinner } from "@material-tailwind/react";
+import { Button, Input, Spinner, Textarea } from "@material-tailwind/react";
+import { contactSchema } from "@/schema/userSchema";
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,7 +16,8 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [validated, setValidated] = useState("");
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
   const handelChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...Form, [name]: value });
@@ -24,16 +25,24 @@ const Contact = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    if (!e.target.checkValidity()) {
-      e.preventDefault();
-      e.stopPropagation();
-      setValidated("not-validated");
-      toast.error("Please fill in all fields or enter a valid email address.");
+    setError(null);
+    setSuccess(false);
+    try {
+      contactSchema.validateSync(
+        {
+          name: Form.name,
+          email: Form.email,
+          message: Form.message,
+        },
+
+        { abortEarly: false }
+      );
+    } catch (error) {
       setLoading(false);
+      setError(error.errors);
       return;
     }
 
-    setValidated("validated");
     emailjs
       .send(
         "service_5fpbwl8",
@@ -50,18 +59,22 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          setSuccess(true);
           toast.success(
             <p>
               <Translate>Thank you</Translate>
-              <span className="text-[#52ee4d] font-extrabold">{Form.name}</span>
-              !, <Translate>I&apos;ve got your message and I&apos;ll reach out to you soon</Translate>.
+              <span className="text-green-500">{Form.name}</span>
+              !,{" "}
+              <Translate>
+                I&apos;ve got your message and I&apos;ll reach out to you soon
+              </Translate>
+              .
             </p>,
             {
               position: "top-right",
               autoClose: 5700,
             }
           );
-          setValidated("");
           setForm({ name: "", email: "", message: "" });
           document
             .querySelectorAll("input")
@@ -92,73 +105,73 @@ const Contact = () => {
           transition={{ duration: 1, type: "spring" }}
           className={` ${styles.sectionHeadText} mb-24 font-bold`}
         >
-          <span className="text-theme-color">04.</span> <Translate>Get in Touch</Translate>
+          <span className="text-theme-color">04.</span>{" "}
+          <Translate>Get in Touch</Translate>
         </motion.h1>
       </div>
       <motion.div
         // variants={slideIn("right", "tween", 0.2, 1)}
         className=" w-[80%] mx-auto bg-[#100d25] p-8 rounded-2xl"
       >
-        <h3 className="text-3xl mx-auto text-stone-50 "><Translate>Contact</Translate>.</h3>
+        <h3 className="text-3xl mx-auto text-stone-50 ">
+          <Translate>Contact</Translate>.
+        </h3>
         <form
           ref={formRef}
-          className={`flex flex-col gap-8 mt-12 ${validated}`}
+          className="flex flex-col gap-8 mt-12"
           onSubmit={handelSubmit}
           noValidate
         >
-          <label className="flex flex-col">
-            <div className="text-white font-medium mb-4">
-              <span><Translate>Your Name</Translate>:</span>
-            </div>
-            <div className="relative">
-              <input
-                type="text"
-                name="name"
-                autoComplete="on"
-                required
-                minLength={4}
-                onChange={handelChange}
-                placeholder="Relax and try to remember"
-                className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-              />
-              <User className="text-theme-color absolute top-4 ltr:right-3 rtl:left-3" />
-            </div>
-          </label>
-          <label className="flex flex-col">
-            <div className="text-white font-medium mb-4">
-              <span><Translate>Your Email</Translate>:</span>
-            </div>
-            <div className="relative">
-              <input
-                type="email"
-                name="email"
-                required
-                autoComplete="on"
-                onChange={handelChange}
-                placeholder="Whats's your email?"
-                className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-              />
-              <MailIcon className="text-theme-color absolute top-4 ltr:right-3 rtl:left-3" />
-            </div>
-          </label>
-          <label className="flex flex-col">
-            <div className="text-white font-medium mb-4">
-              <span><Translate>Your Message</Translate>:</span>{" "}
-            </div>
-            <div className="relative">
-              <textarea
-                rows="7"
-                name="message"
-                required
-                onChange={handelChange}
-                minLength={6}
-                placeholder="Finally What do you wanna say?"
-                className="bg-[#151030] py-4 w-full px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-              />
-              <MessagesSquare className="text-theme-color absolute top-4 ltr:right-3 rtl:left-3" />
-            </div>
-          </label>
-
+          <Input
+            label={<Translate>Name</Translate>}
+            type="text"
+            name="name"
+            autoComplete="on"
+            required
+            onChange={handelChange}
+            className="text-gray-300"
+            size="lg"
+            color="indigo"
+            success={success}
+            error={error}
+          />
+          <Input
+            label={<Translate>Email</Translate>}
+            type="email"
+            name="email"
+            autoComplete="on"
+            required
+            onChange={handelChange}
+            className="text-gray-300"
+            size="lg"
+            color="indigo"
+            success={success}
+            error={error}
+          />
+          <Textarea
+            label={<Translate>Message</Translate>}
+            rows={1}
+            resize={true}
+            required
+            name="message"
+            onChange={handelChange}
+            className="text-gray-300"
+            size="lg"
+            color="indigo"
+            success={success}
+            error={error}
+          />
+          {error && (
+            <ol className="flex list-decimal flex-col gap-1 text-red-500 mx-4 ltr:text-left rtl:text-right">
+              {error.map((err, key) => {
+                return (
+                  <li key={key} className="my-3">
+                    *<Translate>{err}</Translate>
+                  </li>
+                );
+              })}
+            </ol>
+          )}
           <Button
             type="submit"
             className="bg-theme-color py-3 text-xl w-[40%] mx-auto text-white shadow-md"
@@ -166,7 +179,7 @@ const Contact = () => {
             {loading ? (
               <Spinner color="green" className="mx-auto" />
             ) : (
-              <Translate translations={{ar:"أرسل"}}>Send</Translate>
+              <Translate translations={{ ar: "أرسل" }}>Send</Translate>
             )}
           </Button>
         </form>

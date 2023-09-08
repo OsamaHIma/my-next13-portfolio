@@ -25,7 +25,8 @@
     "react-dom": "18.2.0",
     "react-toastify": "^9.1.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "translate-easy": "^1.2.6"
+    "translate-easy": "^1.2.6",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
