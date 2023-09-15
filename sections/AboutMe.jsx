@@ -1,27 +1,11 @@
 "use client";
 import { mySkills } from "@/constants";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Translate } from "translate-easy";
 
 const AboutMe = () => {
-  const secRef = useRef(null);
-
-  // ScrollYProgress is a value between 0 and 1
-  const { scrollYProgress } = useScroll({
-    //target is the element that we want to track
-    target: secRef,
-    offset: ["start end", "end start"],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
-  const xTransform = useTransform(
-    scrollYProgress,
-    [1, 0.5, 0.1, 0],
-    [-1000, 0, 0, 0]
-  );
   return (
-    <section ref={secRef}>
+    <section>
       <motion.div
         className="about mx-16 paddings my-60"
         id="about"
@@ -42,13 +26,7 @@ const AboutMe = () => {
         </div>
         <div className="grid gap-4">
           <div className="flex flex-col gap-4">
-            <motion.div
-              className="cv"
-              style={{
-                scale: scale,
-                x: xTransform,
-              }}
-            >
+            <div className="cv">
               <iframe
                 loading="eager"
                 className="w-[100%] md:w-[65%] rounded-lg"
@@ -65,7 +43,7 @@ const AboutMe = () => {
                 allowFullScreen="allowfullscreen"
                 allow="fullscreen"
               ></iframe>
-            </motion.div>
+            </div>
             <p className="text-slate-600 dark:text-slate-400 font-medium tracking-wider leading-7">
               <Translate>
                 I am passionate about creating digital content for the web.

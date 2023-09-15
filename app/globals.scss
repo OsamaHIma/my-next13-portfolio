@@ -93,16 +93,6 @@ html {
   align-items: center;
   flex-wrap: wrap;
 }
-.validated input,
-.validated textarea {
-  outline: #00cea8;
-  border: 2px solid #00cea8;
-}
-.not-validated input,
-.not-validated textarea {
-  outline: #ce0000;
-  border: 2px solid #ce0000;
-}
 
 /* media queries */
 

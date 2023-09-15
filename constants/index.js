@@ -134,6 +134,29 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "Tumor Scan",
+    description:
+      "Tumor Scan is a cancer diagnosis platform that leverages advanced imaging and AI. For this project, I gained experience integrating various technologies like Python, Flask, and front-end web development. I was responsible for the full-stack - building the backend APIs, designing the UI/UX, and creating a seamless user experience from front to back. This challenged me to quickly adapt to new skills which was a valuable learning experience.",
+    tags: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "Next-auth",
+      },
+      {
+        name: "Firebase",
+      },
+      {
+        name: "Tailwind css",
+      },
+    ],
+    isFeatured: true,
+    image: "/tumor scan.png",
+    // source_code_link: "https://github.com/OsamaHIma/worker-app",
+    live_preview: "https://tumor-scan.vercel.app",
+  },
+  {
     name: "Translate easy",
     description:
       "Translate-easy is an NPM package that I've built and it's the package that I'm using in my portfolio to handle the translations, which allows for easy integration of Google's Translation API into web applications. It provides customizable components such as LanguageProvider, LanguageSelector, and Translate, making it simple to add language translation capabilities to your web apps.",
@@ -170,7 +193,7 @@ export const projects = [
       },
     ],
     image: "/worker.png",
-    source_code_link: "https://github.com/OsamaHIma/worker-app",
+    // source_code_link: "https://github.com/OsamaHIma/worker-app",
     live_preview: "https://worker-web.vercel.app/dashboard",
   },
   {
@@ -224,30 +247,30 @@ export const projects = [
     source_code_link: "https://github.com/OsamaHIma/ecommerce-next13",
     live_preview: "https://crown-store-next13.vercel.app/",
   },
-  {
-    name: "Refilex",
-    description: `A redesigned website for "Refilex" company using next.js and react-three-fiber`,
-    tags: [
-      {
-        name: "Next.js",
-      },
-      {
-        name: "Framer Motion",
-      },
-      {
-        name: "Tailwindcss",
-      },
-      {
-        name: "react-three-fiber",
-      },
-      {
-        name: "three.js",
-      },
-    ],
-    image: "/refilex.png",
-    source_code_link: "https://github.com/OsamaHIma/Refilex-web",
-    live_preview: "https://refilex-web.vercel.app/",
-  },
+  // {
+  //   name: "Refilex",
+  //   description: `A redesigned website for "Refilex" company using next.js and react-three-fiber`,
+  //   tags: [
+  //     {
+  //       name: "Next.js",
+  //     },
+  //     {
+  //       name: "Framer Motion",
+  //     },
+  //     {
+  //       name: "Tailwindcss",
+  //     },
+  //     {
+  //       name: "react-three-fiber",
+  //     },
+  //     {
+  //       name: "three.js",
+  //     },
+  //   ],
+  //   image: "/refilex.png",
+  //   source_code_link: "https://github.com/OsamaHIma/Refilex-web",
+  //   live_preview: "https://refilex-web.vercel.app/",
+  // },
   {
     name: "Metaversus",
     description:

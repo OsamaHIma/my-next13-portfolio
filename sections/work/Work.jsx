@@ -41,7 +41,7 @@ const Work = () => {
           }) => {
             return (
               <motion.div
-                className="project my-4"
+                className="project relative flex justify-center md:justify-end my-4"
                 key={name}
                 initial="hidden"
                 whileInView="visible"
@@ -53,11 +53,11 @@ const Work = () => {
                 }}
                 dir="ltr"
               >
-                <div className="project-image rounded-lg">
+                <div className="project-image relative -top-[50%] left-[50%] md:top-0 md:left-0 rounded-lg">
                   <Link href={live_preview} target="_blank">
-                    <div className="project-image-overlay"></div>
                     <div className="project-image-container">
-                      <Image src={image} fill alt={name} quality={100} />
+                    {/* <div className="project-image-overlay"></div> */}
+                      <img src={image}  alt={name} quality={100} ></img>
                     </div>
                   </Link>
                 </div>
@@ -69,7 +69,7 @@ const Work = () => {
                     {name}
                   </h3>
                   <div className="project-info-description">
-                    <p>
+                    <p className="text-sm md:text-base tracking-wider">
                       <Translate>{description}</Translate>
                     </p>
                   </div>
@@ -84,14 +84,15 @@ const Work = () => {
                     ))}
                   </ul>
                   <ul className="project-info-links">
-                    <li className="project-info-links-item">
+                    {source_code_link && (<li className="project-info-links-item">
                       <Link
                         href={source_code_link}
                         className="project-info-links-item-link"
                       >
                         <GithubIcon />
                       </Link>
-                    </li>
+                    </li>)}
+
                     <li className="project-info-links-item">
                       <Link
                         href={live_preview}
