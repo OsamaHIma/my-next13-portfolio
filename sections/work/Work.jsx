@@ -41,7 +41,7 @@ const Work = () => {
           }) => {
             return (
               <motion.div
-                className="project relative flex justify-center md:justify-end my-4"
+                className="project px-5 xl:px-0 relative flex justify-center md:justify-end my-4"
                 key={name}
                 initial="hidden"
                 whileInView="visible"
@@ -61,11 +61,11 @@ const Work = () => {
                     </div>
                   </Link>
                 </div>
-                <div className="project-info rounded-lg">
+                <div className="project-info items-start  rounded-lg">
                   <p className="project-info-overline">
                     {isFeatured && "Featured Project"}
                   </p>
-                  <h3 className="project-info-title lg:text-slate-600 font-semibold text-3xl md:text-5xl dark:text-slate-300">
+                  <h3 className="project-info-title text-slate-700 shadow lg:text-slate-600 font-semibold text-3xl md:text-5xl dark:text-indigo-600">
                     {name}
                   </h3>
                   <div className="project-info-description">
