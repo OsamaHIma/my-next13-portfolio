@@ -1,9 +1,9 @@
 "use client";
-import { ThemeProvider } from "next-themes";
 import Cursor from "react-cursor-follow";
+import { ThemeProvider } from "next-themes";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { LanguageProvider } from "translate-easy";
+import "react-toastify/dist/ReactToastify.css";
 
 const Providers = ({ children }) => {
   return (
@@ -18,11 +18,7 @@ const Providers = ({ children }) => {
           limit={1}
           toastClassName="dark:bg-stone-900 dark:text-indigo-100"
         />
-        <body
-          className={`ltr:!font-poppins rtl:!font-cairo transition-all ease-in bg-slate-200 dark:bg-main-color`}
-        >
-          {children}
-        </body>
+        {children}
       </LanguageProvider>
     </ThemeProvider>
   );
