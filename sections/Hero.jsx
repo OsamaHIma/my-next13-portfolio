@@ -57,7 +57,7 @@ const Hero = () => {
           <span className=" text-gray-400 dark:text-slate-100">
             Front-end Developer
           </span>
-          <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-main-color dark:bg-theme-color/80 -top-2 md:top-0 -left-3" />
+          <div className="hero-circle absolute h-14 w-14 md:w-20 md:h-20 rounded-full -z-[1] bg-stone-950 dark:bg-theme-color/80 -top-2 md:top-0 -left-3" />
         </h3>
       </div>
       <p className="font-semibold text-gray-600 dark:text-gray-300 leading-8 mt-2 text-[18px]">

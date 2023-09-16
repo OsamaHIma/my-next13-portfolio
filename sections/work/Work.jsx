@@ -9,7 +9,7 @@ import { Translate } from "translate-easy";
 
 const Work = () => {
   return (
-    <section id="work" className="projects mx-16 paddings mt-60 mb-52">
+    <section id="work" className="projects  md:mx-16 paddings mt-60 mb-52">
       <motion.div
         className="title relative mb-8 font-bold"
         initial="hidden"
@@ -22,7 +22,7 @@ const Work = () => {
         }}
       >
         <h2
-          className={`text-2xl md:text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-96 rtl:after:mr-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block`}
+          className={`text-2xl mb-36 xl:mb-0 md:text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-96 rtl:after:mr-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block`}
         >
           <span className={`text-theme-color`}>03.</span>{" "}
           <Translate>Projects I&apos;v built</Translate>
@@ -65,7 +65,7 @@ const Work = () => {
                   <p className="project-info-overline">
                     {isFeatured && "Featured Project"}
                   </p>
-                  <h3 className="project-info-title text-slate-700 shadow lg:text-slate-600 font-semibold text-3xl md:text-5xl dark:text-indigo-600">
+                  <h3 className="project-info-title text-slate-700 shadow lg:text-slate-600 font-semibold text-xl md:text-3xl xl:text-5xl dark:text-indigo-600">
                     {name}
                   </h3>
                   <div className="project-info-description">
