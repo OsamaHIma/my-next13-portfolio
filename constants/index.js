@@ -58,11 +58,6 @@ export const workSkills = [
   applications`,
   },
   {
-    skill: `Reviewed code written by interns, providing actionable feedback
-  and suggestions for improvement to ensure code quality and
-  maintainability`,
-  },
-  {
     skill: `Troubleshot and debugged issues in web applications, both
   independently and in collaboration with other developers, to
   ensure optimal user experience`,
@@ -155,6 +150,29 @@ export const projects = [
     image: "/tumor scan.png",
     // source_code_link: "https://github.com/OsamaHIma/worker-app",
     live_preview: "https://tumor-scan.vercel.app",
+  },
+  {
+    name: "AI Breed Finder",
+    description:
+      "This project helps users identify the breed of their pets, whether it's a dog, cat, or any other animal. The AI algorithms analyze the unique characteristics of the pet and provide accurate breed predictions.",
+    tags: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "Next-auth",
+      },
+      {
+        name: "Firebase",
+      },
+      {
+        name: "Flask",
+      },
+    ],
+    isFeatured: true,
+    image: "/tumor scan.png",
+    // source_code_link: "https://github.com/OsamaHIma/worker-app",
+    live_preview: "https://ai-breed-finder.vercel.app",
   },
   {
     name: "Translate easy",
