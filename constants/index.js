@@ -170,7 +170,7 @@ export const projects = [
       },
     ],
     isFeatured: true,
-    image: "/tumor scan.png",
+    image: "/ai-breed-finder.png",
     // source_code_link: "https://github.com/OsamaHIma/worker-app",
     live_preview: "https://ai-breed-finder.vercel.app",
   },
