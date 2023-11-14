@@ -87,6 +87,7 @@ const Work = () => {
                     {source_code_link && (<li className="project-info-links-item">
                       <Link
                         href={source_code_link}
+                        target="_blank"
                         className="project-info-links-item-link"
                       >
                         <GithubIcon />
@@ -96,6 +97,7 @@ const Work = () => {
                     <li className="project-info-links-item">
                       <Link
                         href={live_preview}
+                        target="_blank"
                         className="project-info-links-item-link"
                       >
                         <ExternalLink />
