@@ -58,10 +58,9 @@ const Navbar = () => {
 
   return (
     <section
-      className={` ${
-        scrolled &&
+      className={` ${scrolled &&
         "backdrop-blur-md bg-main-color/60 !text-slate-100 dark:bg-transparent"
-      } w-full fixed top-0 z-20 h-wrapper transition-all ease-in text-slate-800 dark:text-white`}
+        } w-full fixed top-0 z-20 h-wrapper transition-all ease-in text-slate-800 dark:text-white`}
     >
       <motion.div
         initial={{ y: "-2rem", opacity: 0 }}
@@ -80,11 +79,11 @@ const Navbar = () => {
         <nav className="flexCenter gap-2">
           {/* Theme menu */}
           <ThemeSelector />
-          
+
           {/* for large screens */}
           <div className="hidden xl:block">
             <ul className="h-menu flexCenter !gap-6">
-<LanguageSelector />
+              <LanguageSelector />
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={`#${link.id}`} title={link.name}>
@@ -104,9 +103,8 @@ const Navbar = () => {
               <Button
                 type="button"
                 variant="outlined"
-                className={`${
-                  scrolled && "bg-theme-color"
-                }  border-2 mr-1 border-solid border-theme-color`}
+                className={`${scrolled && "bg-theme-color"
+                  }  border-2 mr-1 border-solid border-theme-color`}
               >
                 <Link
                   target="_blank"
@@ -118,9 +116,8 @@ const Navbar = () => {
               </Button>
               <IconButton
                 variant="text"
-                className={` ${
-                  scrolled ? "text-slate-100" : "text-slate-900 dark:text-slate-200"
-                }  transition-all ease-in-out`}
+                className={` ${scrolled ? "text-slate-100" : "text-slate-900 dark:text-slate-200"
+                  }  transition-all ease-in-out`}
                 onClick={handelMaximize}
                 title="Toggle maximize and minimize screen"
               >
@@ -142,9 +139,8 @@ const Navbar = () => {
                 variant="text"
                 className="mx-1.5 md:mx-4 block rounded-full xl:hidden"
               >
-                <MenuIcon className={` ${
-                  scrolled ? "text-slate-100" : "text-slate-900 dark:text-slate-400 transition-all ease-in-out duration-300"
-                }`} />
+                <MenuIcon className={` ${scrolled ? "text-slate-100" : "text-slate-900 dark:text-slate-400 transition-all ease-in-out duration-300"
+                  }`} />
                 <span className="sr-only">
                   <Translate>Toggle menu</Translate>
                 </span>
@@ -152,8 +148,8 @@ const Navbar = () => {
             </MenuHandler>
 
             <MenuList className="dark:bg-slate-900 border-0 w-[15rem] flex gap-1 flex-col xl:hidden text-stone-950 dark:text-stone-50 shadow-lg text-base">
-<LanguageSelector /> 
-             {navLinks.map((link, index) => (
+              <LanguageSelector />
+              {navLinks.map((link, index) => (
                 <Link key={index} href={`${link.id}`}>
                   <MenuItem className="hover:!border-0 dark:hover:!bg-gray-100 text-base">
                     <span className="font-semibold mx-2 text-theme-color">
@@ -166,7 +162,7 @@ const Navbar = () => {
               <Button className="min-w-[7rem] max-w-[8rem] mx-auto bg-theme-color hover:bg-theme-color/70 ">
                 <Link
                   target="_blank"
-                  href="https://drive.google.com/file/d/1U9RZB4ZQ2EpwKdj988bsUFa8q7K9vtYh/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1RHi0nJJB15-gWUZAEbVdROEdqE1Nlvu_/view?usp=sharing"
                 >
                   <Translate>My Resume</Translate>
                 </Link>

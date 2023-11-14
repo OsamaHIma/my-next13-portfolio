@@ -129,6 +129,30 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "ChatHub",
+    description: `A real-time messaging platform built with the MERN stack,
+      enhanced with Next.js for the frontend. The application enables secure
+      and seamless communication between users.`,
+    tags: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "Mongo DB",
+      },
+      {
+        name: "express.js",
+      },
+      {
+        name: "Socket.io",
+      },
+    ],
+    isFeatured: true,
+    image: "/chatHub.png",
+    source_code_link: "https://github.com/OsamaHIma/ChatHub",
+    live_preview: "https://chathub-web.vercel.app/",
+  },
+  {
     name: "Tumor Scan",
     description:
       "Tumor Scan is a cancer diagnosis platform that leverages advanced imaging and AI. For this project, I gained experience integrating various technologies like Python, Flask, and front-end web development. I was responsible for the full-stack - building the backend APIs, designing the UI/UX, and creating a seamless user experience from front to back. This challenged me to quickly adapt to new skills which was a valuable learning experience.",
@@ -149,7 +173,7 @@ export const projects = [
     isFeatured: true,
     image: "/tumor scan.png",
     // source_code_link: "https://github.com/OsamaHIma/worker-app",
-    live_preview: "https://tumor-scan.vercel.app",
+    live_preview: "https://tumor-scan.vercel.app/",
   },
   {
     name: "AI Breed Finder",
@@ -172,7 +196,7 @@ export const projects = [
     isFeatured: true,
     image: "/ai-breed-finder.png",
     // source_code_link: "https://github.com/OsamaHIma/worker-app",
-    live_preview: "https://ai-breed-finder.vercel.app",
+    live_preview: "https://ai-breed-finder.vercel.app/",
   },
   {
     name: "Translate easy",
