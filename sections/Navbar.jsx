@@ -108,7 +108,7 @@ const Navbar = () => {
               >
                 <Link
                   target="_blank"
-                  href="https://drive.google.com/file/d/1U9RZB4ZQ2EpwKdj988bsUFa8q7K9vtYh/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1RHi0nJJB15-gWUZAEbVdROEdqE1Nlvu_/view?usp=sharing"
                   className={`text-theme-color ${scrolled && "!text-slate-50"}`}
                 >
                   <Translate>My Resume</Translate>
