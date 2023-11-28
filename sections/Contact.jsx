@@ -2,11 +2,13 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { styles } from "./styles";
 import { Translate } from "translate-easy";
 import { Button, Input, Spinner, Textarea } from "@material-tailwind/react";
 import { contactSchema } from "@/schema/userSchema";
+import {  TypingText } from "@/components/TypingText";
+import { staggerContainer } from "@/utils";
 
 const Contact = () => {
   const formRef = useRef();
@@ -98,6 +100,13 @@ const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden shadow-lg pb-8">
       <div className="title text-center">
+      <motion.div
+        className={`${styles.paddingX}`}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+      >
+        <TypingText title="| Contact me" />
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -108,6 +117,7 @@ const Contact = () => {
           <span className="text-theme-color">04.</span>{" "}
           <Translate>Get in Touch</Translate>
         </motion.h1>
+      </motion.div>
       </div>
       <motion.div
         // variants={slideIn("right", "tween", 0.2, 1)}
@@ -149,7 +159,12 @@ const Contact = () => {
             error={error}
           />
           <Textarea
-            label={<Translate>Message</Translate>}
+             label={
+              <>
+                <Translate>Message</Translate>&nbsp;
+                <span className="text-red-500">*</span>
+              </>
+            }
             rows={1}
             resize={true}
             required

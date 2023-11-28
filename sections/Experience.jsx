@@ -1,5 +1,5 @@
 "use client";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,9 +10,10 @@ import { experiences, workSkills } from "@/constants";
 import { styles } from "./styles";
 import { AlignRightIcon, Calendar, Code, MapPin } from "lucide-react";
 import { Translate } from "translate-easy";
+import { TitleText, TypingText } from "@/components/TypingText";
+import { staggerContainer } from "@/utils";
 
 const Experience = () => {
-
   const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
       contentStyle={{ background: "#1e2d47", color: "#fff" }}
@@ -46,27 +47,28 @@ const Experience = () => {
     </VerticalTimelineElement>
   );
   return (
-    <section className={`${styles.paddingX}`} id="experience">
+    <motion.section
+      // variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      className={`${styles.paddingX}`}
+      id="experience"
+    >
       <motion.div
         className={`${styles.paddingX}`}
+        variants={staggerContainer}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        variants={{
-          visible: { opacity: 1, y: -50 },
-          hidden: { opacity: 0, y: 0 },
-        }}
+        whileInView="show"
       >
-        <p className={`${styles.sectionSubText}`}>
-          <Translate>What I have learned so far</Translate>
-        </p>
-        <h2
-          className={`text-2xl md:text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-96 rtl:after:mr-72 after:top-7 after:h-[2px] after:bg-slate-400 after:absolute after:block`}
-        >
-          <span className="text-theme-color">02.</span>{" "}
-          <Translate>My Certificates</Translate>.
-        </h2>
+        <TypingText title="| What I have learned so far" />
+        <TitleText
+          title={
+            <>
+              <span className="text-theme-color">02.</span>
+              <Translate>My Certificates</Translate>.
+            </>
+          }
+        />
       </motion.div>
       <div className="flex flex-col mt-20" dir="ltr">
         <VerticalTimeline>
@@ -75,7 +77,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-      <div className="bg-slate-100 dark:bg-[#10284b] shadow-lg rounded-lg overflow-hidden">
+      <div className="bg-slate-100 py-4 md:py-6 dark:bg-[#10284b] shadow-lg rounded-lg overflow-hidden">
         <div className="px-6 py-4">
           <h1 className="font-bold text-3xl mb-7 text-center">
             <Translate>My work experience</Translate>
@@ -127,7 +129,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

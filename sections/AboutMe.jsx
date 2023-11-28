@@ -2,6 +2,8 @@
 import { mySkills } from "@/constants";
 import { motion } from "framer-motion";
 import { Translate } from "translate-easy";
+import { TitleText, TypingText } from "@/components/TypingText";
+import { staggerContainer } from "@/utils";
 
 const AboutMe = () => {
   return (
@@ -18,12 +20,24 @@ const AboutMe = () => {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <div className="title relative mb-8 font-bold">
-          <h2 className="text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-72 rtl:after:mr-60 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block">
-            <span className="text-theme-color">01.</span>{" "}
-            <Translate translations={{ ar: "نبذة عني" }}>About Me</Translate>
-          </h2>
-        </div>
+        <motion.div
+          className={`title relative mb-8 font-bold`}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+        >
+          <TypingText title="| Get to know me" />
+          <TitleText
+            title={
+              <>
+                <span className="text-theme-color">01.</span>
+                <Translate translations={{ ar: "نبذة عني" }}>
+                  About Me
+                </Translate>
+              </>
+            }
+          />
+        </motion.div>
         <div className="grid gap-4">
           <div className="flex flex-col gap-4">
             <div className="cv">

@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import "./work.scss";
 import { Translate } from "translate-easy";
+import { TitleText, TypingText } from "@/components/TypingText";
+import { staggerContainer } from "@/utils";
 
 const Work = () => {
   return (
@@ -21,12 +23,21 @@ const Work = () => {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2
-          className={`text-2xl mb-36 xl:mb-0 md:text-4xl dark:text-slate-300 after:w-80 ltr:after:ml-96 rtl:after:mr-96 after:top-4 after:h-[2px] after:bg-slate-400 after:absolute after:block`}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
         >
-          <span className={`text-theme-color`}>03.</span>{" "}
-          <Translate>Projects I&apos;v built</Translate>
-        </h2>
+          <TypingText title="| My work" />
+          <TitleText
+            title={
+              <>
+                <span className={`text-theme-color`}>03.</span>{" "}
+                <Translate>Projects I&apos;v built</Translate>
+              </>
+            }
+          />
+        </motion.div>
       </motion.div>
       <div className="projects-container">
         {projects.map(
@@ -56,8 +67,8 @@ const Work = () => {
                 <div className="project-image relative -top-[50%] left-[50%] md:top-0 md:left-0 rounded-lg">
                   <Link href={live_preview} target="_blank">
                     <div className="project-image-container">
-                    {/* <div className="project-image-overlay"></div> */}
-                      <img src={image}  alt={name} quality={100} ></img>
+                      {/* <div className="project-image-overlay"></div> */}
+                      <img src={image} alt={name} quality={100}></img>
                     </div>
                   </Link>
                 </div>
@@ -84,15 +95,17 @@ const Work = () => {
                     ))}
                   </ul>
                   <ul className="project-info-links">
-                    {source_code_link && (<li className="project-info-links-item">
-                      <Link
-                        href={source_code_link}
-                        target="_blank"
-                        className="project-info-links-item-link"
-                      >
-                        <GithubIcon />
-                      </Link>
-                    </li>)}
+                    {source_code_link && (
+                      <li className="project-info-links-item">
+                        <Link
+                          href={source_code_link}
+                          target="_blank"
+                          className="project-info-links-item-link"
+                        >
+                          <GithubIcon />
+                        </Link>
+                      </li>
+                    )}
 
                     <li className="project-info-links-item">
                       <Link

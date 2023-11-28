@@ -2,19 +2,19 @@ import { FacebookIcon, LinkedinIcon, GithubIcon } from "lucide-react";
 
 export const navLinks = [
   {
-    id: "about",
+    id: "/#about",
     name: "About Me",
   },
   {
-    id: "experience",
+    id: "/#experience",
     name: "My Experience",
   },
   {
-    id: "work",
+    id: "/#work",
     name: "My Work",
   },
   {
-    id: "contact",
+    id: "/#contact",
     name: "Contact Me",
   },
 ];

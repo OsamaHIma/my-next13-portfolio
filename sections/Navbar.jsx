@@ -58,9 +58,10 @@ const Navbar = () => {
 
   return (
     <section
-      className={` ${scrolled &&
+      className={` ${
+        scrolled &&
         "backdrop-blur-md bg-main-color/60 !text-slate-100 dark:bg-transparent"
-        } w-full fixed top-0 z-20 h-wrapper transition-all ease-in text-slate-800 dark:text-white`}
+      } w-full fixed top-0 z-20 h-wrapper transition-all ease-in text-slate-800 dark:text-white`}
     >
       <motion.div
         initial={{ y: "-2rem", opacity: 0 }}
@@ -70,18 +71,18 @@ const Navbar = () => {
         className="h-container py-4 flexCenter !flex-nowrap border-b-[3px] border-slate-300 dark:border-indigo-400 !justify-between innerWidth"
       >
         <Link href="/">
-          <h1 className="font-bold md:text-xl" dir="ltr">
-            <ChevronLeftIcon className="inline text-theme-color" size={37} />
-            OSAMA IBRAHIM <span className="text-md">/</span>
-            <ChevronRightIcon className="inline text-theme-color" size={37} />
+          <h1 className="font-bold md:text-xl pl-3 md:pl-0" dir="ltr">
+            <ChevronLeftIcon className=" hidden md:inline text-theme-color" size={37} />
+            OSAMA IBRAHIM <span className="text-md hidden md:inline">/</span>
+            <ChevronRightIcon className=" hidden md:inline text-theme-color" size={37} />
           </h1>
         </Link>
         <nav className="flexCenter gap-2">
           {/* Theme menu */}
           <ThemeSelector />
-
+          <LanguageSelector />
           {/* for large screens */}
-          <div className="hidden xl:block">
+          <div className="hidden 2xl:block">
             <ul className="h-menu flexCenter !gap-6">
               <LanguageSelector />
               {navLinks.map((link, index) => (
@@ -103,8 +104,9 @@ const Navbar = () => {
               <Button
                 type="button"
                 variant="outlined"
-                className={`${scrolled && "bg-theme-color"
-                  }  border-2 mr-1 border-solid border-theme-color`}
+                className={`${
+                  scrolled && "bg-theme-color"
+                }  border-2 mr-1 border-solid border-theme-color`}
               >
                 <Link
                   target="_blank"
@@ -116,8 +118,11 @@ const Navbar = () => {
               </Button>
               <IconButton
                 variant="text"
-                className={` ${scrolled ? "text-slate-100" : "text-slate-900 dark:text-slate-200"
-                  }  transition-all ease-in-out`}
+                className={` ${
+                  scrolled
+                    ? "text-slate-100"
+                    : "text-slate-900 dark:text-slate-200"
+                }  transition-all ease-in-out`}
                 onClick={handelMaximize}
                 title="Toggle maximize and minimize screen"
               >
@@ -137,18 +142,22 @@ const Navbar = () => {
             <MenuHandler>
               <IconButton
                 variant="text"
-                className="mx-1.5 md:mx-4 block rounded-full xl:hidden"
+                className="mx-1.5 md:mx-4 block rounded-full 2xl:hidden"
               >
-                <MenuIcon className={` ${scrolled ? "text-slate-100" : "text-slate-900 dark:text-slate-400 transition-all ease-in-out duration-300"
-                  }`} />
+                <MenuIcon
+                  className={` ${
+                    scrolled
+                      ? "text-slate-100"
+                      : "text-slate-900 dark:text-slate-400 transition-all ease-in-out duration-300"
+                  }`}
+                />
                 <span className="sr-only">
                   <Translate>Toggle menu</Translate>
                 </span>
               </IconButton>
             </MenuHandler>
 
-            <MenuList className="dark:bg-slate-900 border-0 w-[15rem] flex gap-1 flex-col xl:hidden text-stone-950 dark:text-stone-50 shadow-lg text-base">
-              <LanguageSelector />
+            <MenuList className="dark:bg-slate-900 border-0 w-[15rem] flex gap-1 flex-col 2xl:hidden text-stone-950 dark:text-stone-50 shadow-lg text-base">
               {navLinks.map((link, index) => (
                 <Link key={index} href={`${link.id}`}>
                   <MenuItem className="hover:!border-0 dark:hover:!bg-gray-100 text-base">

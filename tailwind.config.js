@@ -14,10 +14,9 @@ module.exports = withMT({
   ],
   theme: {
     fontFamily: {
-      sans: ["Poppins", "Cairo", "serif"],
-      cairo: ["Cairo", "sans-serif"],
-      poppins: ["Poppins", "Cairo", "serif"],
-      body: ["Cairo", "Poppins", "sans-serif"],
+      sans: ["inherit"],
+      cairo: ["var(--font-cairo)", "var(--font-poppins)"],
+      poppins: ["var(--font-poppins)", "var(--font-cairo)"],
     },
     container: {
       center: true,

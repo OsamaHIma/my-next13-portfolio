@@ -15,7 +15,7 @@
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.8.5",
     "lucide-react": "^0.181.0",
-    "next": "13.3.0",
+    "next": "^14.0.3",
     "next-themes": "^0.2.1",
     "node-fetch": "^3.3.1",
     "prettier": "^3.0.3",
@@ -23,9 +23,9 @@
     "react-accessible-accordion": "^5.0.0",
     "react-cursor-follow": "^2.0.0",
     "react-dom": "18.2.0",
-    "react-toastify": "^9.1.2",
+    "react-hot-toast": "^2.4.1",
     "react-vertical-timeline-component": "^3.6.0",
-    "translate-easy": "^1.2.6",
+    "translate-easy": "^1.2.8",
     "yup": "^1.2.0"
   },
   "devDependencies": {

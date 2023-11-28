@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "cricle"
-    ]
+    ],
+    "editor.inlineSuggest.showToolbar": "onHover"
 }

@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@200;300;500;700;800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,7 +34,9 @@ html,
 body {
   scroll-behavior: smooth !important;
 }
-
+html {
+  scroll-padding-top: 120px;
+}
 body {
   counter-reset: title;
 }
@@ -92,6 +91,84 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 70px;
+  right: 29px;
+  height: 70px;
+  background: rgba(137, 189, 73, 0.25);
+  border: none;
+  -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  color: #fff;
+  padding: 0;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 99;
+  font-size: 0;
+  font-weight: bold;
+  color: #fff !important;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.whatsapp-button i.icon {
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #722ffb;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 10px 0 10px 10px;
+  -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  -o-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+.whatsapp-button i.icon svg {
+  height: 30px;
+  position: relative;
+  bottom: 1px;
+}
+.whatsapp-button i.icon:after {
+  content: "";
+  position: fixed;
+  display: block;
+  height: 70px;
+  width: 70px;
+  background: rgb(97 100 255 / 40%);
+  z-index: -1;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  @apply animate-pulse;
+}
+.whatsapp-button i.icon svg path {
+  fill: #fff;
 }
 
 /* media queries */

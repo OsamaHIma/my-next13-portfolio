@@ -3,7 +3,7 @@ import Hero from "@/sections/Hero";
 import Email from "@/components/Email";
 import SocialIcons from "@/components/SocialIcons";
 import AboutMe from "@/sections/AboutMe";
-import Work from "@/sections/work/Work";
+import Work from "@/sections/work";
 import Contact from "@/sections/Contact";
 import Experience from "@/sections/Experience";
 
@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="relative overflow-x-clip">
       <div className="relative transition-all ease-in">
-        <div className="gradient absolute w-80 h-80 bg-theme-color/25 blur-[100px] left-[100px] -z-[1]" />
+        <div className="gradient absolute w-80 h-80 bg-theme-color/25 blur-[100px] right-[100px] -z-[1]" />
         <Navbar />
         <main>
           <Hero />
