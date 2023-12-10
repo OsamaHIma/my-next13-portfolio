@@ -80,7 +80,7 @@ const Navbar = () => {
         <nav className="flexCenter gap-2">
           {/* Theme menu */}
           <ThemeSelector />
-          <LanguageSelector />
+          {/* <LanguageSelector /> */}
           {/* for large screens */}
           <div className="hidden 2xl:block">
             <ul className="h-menu flexCenter !gap-6">
