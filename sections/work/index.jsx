@@ -76,7 +76,7 @@ const Work = () => {
                   <p className="project-info-overline">
                     {isFeatured && "Featured Project"}
                   </p>
-                  <h3 className="project-info-title text-slate-700 shadow lg:text-slate-600 font-semibold text-xl md:text-3xl xl:text-5xl dark:text-indigo-600">
+                  <h3 className="project-info-title text-slate-700 lg:text-slate-600 font-semibold text-xl md:text-3xl xl:text-5xl dark:text-indigo-600">
                     {name}
                   </h3>
                   <div className="project-info-description">
