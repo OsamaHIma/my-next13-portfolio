@@ -18,7 +18,7 @@ export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className="min-h-80 flex items-center relative justify-center container">
+    <section className="min-h-80 flex items-center relative justify-center container" id="hero">
       <div className="w-full absolute left-0 top-0">
         <Image
           src="/grid.svg"

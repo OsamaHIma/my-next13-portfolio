@@ -45,9 +45,12 @@ export default function NavbarComponent() {
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden" />
         <NavbarBrand>
-          <p className="font-bold bg-gradient-to-tr bg-clip-text text-transparent from-purple-200 via-blue-600 to-purple-500">
+          <Link
+            href="/"
+            className="font-bold bg-gradient-to-tr bg-cliLink-text text-transparent from-purple-200 via-blue-600 to-purple-500"
+          >
             Osama Ibrahim
-          </p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
