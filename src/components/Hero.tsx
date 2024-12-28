@@ -72,7 +72,7 @@ export default function Hero() {
           <BlurFade inView delay={1.1}>
             <Link href="https://github.com/OsamaHIma" target="_blank">
               <InteractiveHoverButton
-                className="py-3"
+                className="py-3 w-64"
                 text={t("checkGithub")}
               />
             </Link>
