@@ -41,17 +41,17 @@ export async function generateMetadata({
 export default function Home() {
   return (
     <ReactLenisWrapper>
-      <main className="relative flex justify-center items-center flex-col overflow-clip mx-auto">
+      <div className="relative flex justify-center items-center flex-col overflow-clip mx-auto">
         <Navbar />
-        <div className="max-w-7xl w-full sm:px-10 px-5">
+        <main className="max-w-7xl w-full sm:px-10 px-5">
           <Hero />
           <Projects />
           <div className="absolute -z-[1] top-[50%] left-[5%] size-80 bg-blue-500/30 blur-[100px]" />
           <div className="absolute -z-[1] bottom-[14%] sm:bottom-[10%] right-[5%] size-80 bg-gradient-to-tr from-red-200 from-40% via-60% via-blue-600 to-purple-500 blur-[93px]" />
           <Experience />
-        </div>
+        </main>
         <Footer />
-      </main>
+      </div>
     </ReactLenisWrapper>
   );
 }
