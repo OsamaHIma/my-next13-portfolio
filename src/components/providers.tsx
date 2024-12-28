@@ -26,7 +26,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     <NextUIProvider>
       <NextThemesProvider
         attribute="class"
-        enableSystem
+        defaultTheme="dark"
         disableTransitionOnChange
         {...themeProps}
       >
