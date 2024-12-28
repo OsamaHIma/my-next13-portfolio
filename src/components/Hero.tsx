@@ -48,7 +48,7 @@ export default function Hero() {
                 `inline !leading-[2.9rem] lg:!leading-[5.3rem] animate-gradient whitespace-nowrap text-4xl lg:text-6xl font-bold bg-gradient-to-r from-[#ffaa40] via-[#2563eb] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
               )}
             >
-              {t("name")} TEst
+              {t("name")}
             </h1>
           </AnimatedGradientText>
         </BlurFade>
