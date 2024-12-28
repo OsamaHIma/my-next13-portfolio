@@ -58,12 +58,23 @@ export default function NavbarComponent() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {navLinks.map((link) => (
           <NavbarItem key={link.id}>
-            <Link
-              href={link.id}
-              className={pathname === link.id ? "text-primary" : ""}
-            >
-              {t(link.name)}
-            </Link>
+            {link.isDownload ? (
+              <a
+                href={link.id}
+                download
+                target="_blank"
+                className="hover:text-primary transition-colors"
+              >
+                {t(link.name)}
+              </a>
+            ) : (
+              <Link
+                href={link.id}
+                className={pathname === link.id ? "text-primary" : ""}
+              >
+                {t(link.name)}
+              </Link>
+            )}
           </NavbarItem>
         ))}
       </NavbarContent>
@@ -131,12 +142,25 @@ export default function NavbarComponent() {
       <NavbarMenu>
         {navLinks.map((link) => (
           <NavbarMenuItem key={link.id}>
-            <Link
-              href={link.id}
-              className={`w-full ${pathname === link.id ? "text-primary" : ""}`}
-            >
-              {t(link.name)}
-            </Link>
+            {link.isDownload ? (
+              <a
+                href={link.id}
+                download
+                target="_blank"
+                className="w-full hover:text-primary transition-colors"
+              >
+                {t(link.name)}
+              </a>
+            ) : (
+              <Link
+                href={link.id}
+                className={`w-full ${
+                  pathname === link.id ? "text-primary" : ""
+                }`}
+              >
+                {t(link.name)}
+              </Link>
+            )}
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

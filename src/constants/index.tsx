@@ -1,10 +1,10 @@
 import { FacebookIcon, LinkedinIcon, GithubIcon } from "lucide-react";
 
 export const navLinks = [
-  {
-    id: "/#about",
-    name: "About Me",
-  },
+  // {
+  //   id: "/#about",
+  //   name: "About Me",
+  // },
   {
     id: "/#experience",
     name: "My Experience",
@@ -16,6 +16,11 @@ export const navLinks = [
   {
     id: "/#contact",
     name: "Contact Me",
+  },
+  {
+    id: "/Osama-Ibrahim-CV.pdf",
+    name: "Download CV",
+    isDownload: true, // Add this flag to handle download behavior differently in your navigation component
   },
 ];
 
@@ -84,16 +89,16 @@ export const experiences = [
   {
     title: "Front-end Developer",
     company: "Tazamun Information Technology",
-    location: "Tanta, Egypt",
-    date: "Nov 2023 - Present",
+    location: "Experience.locations.tazamun",
+    date: "Experience.dates.tazamun",
     icon: "/companies/tazamun.jpg",
     description: "Experience.descriptions.tazamun",
   },
   {
     title: "Front-end Developer",
     company: "Etrevago",
-    location: "Jordan - Remotely",
-    date: "May 2023 - Aug 2023",
+    location: "Experience.locations.etrevago",
+    date: "Experience.dates.etrevago",
     icon: "/companies/etrevago.png",
     description: "Experience.descriptions.etrevago",
   },

@@ -6,6 +6,7 @@
     "About Me": "About Me",
     "My Experience": "My Experience",
     "My Work": "My Work",
+    "Download CV": "Download CV",
     "Contact Me": "Contact Me"
   },
   "Hero": {
@@ -26,6 +27,14 @@
       "htmlCert": "Comprehensive certification in web development fundamentals, covering HTML5, CSS3, responsive design, and JavaScript basics.",
       "jsCert": "Advanced JavaScript programming certification covering ES6+, async programming, OOP principles, and modern JS practices.",
       "reactCert": "In-depth React.js certification focusing on modern development practices, state management, API integration, and testing."
+    },
+    "locations": {
+      "tazamun": "Tanta, Egypt",
+      "etrevago": "Jordan - Remotely"
+    },
+    "dates": {
+      "tazamun": "Nov 2023 - Present",
+      "etrevago": "May 2023 - Aug 2023"
     }
   },
   "Projects": {

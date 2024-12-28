@@ -43,9 +43,9 @@ const Experience = () => {
                   {t(card.description)}
                 </p>
                 <div className="text-start space-y-0.5 text-sm text-default-500 -mb-2 sm:-mb-5 mt-1">
-                  <p className="text-default-900 font-semibold">{card.company}</p>
+                  <p className="text-default-900 font-semibold">{t(card.company)}</p>
                   <p>
-                    {card.location} | {card.date}
+                    {t(card.location)} | {t(card.date)}
                   </p>
                 </div>
               </div>
