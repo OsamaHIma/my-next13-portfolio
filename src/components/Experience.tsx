@@ -7,7 +7,7 @@ import Image from "next/image";
 const Experience = () => {
   const t = useTranslations();
   return (
-    <div className="py-20 2xl:py-27 w-full">
+    <div className="py-20 2xl:py-27 w-full" id="experience">
       <h1 className="heading">
         {t("Experience.title")}{" "}
         <span className="text-primary">{t("Experience.title2")}</span>

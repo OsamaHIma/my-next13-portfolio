@@ -14,7 +14,7 @@ import Image from "next/image";
 const RecentProjects = () => {
   const t = useTranslations("Projects");
   return (
-    <div className="py-20 2xl:py-27">
+    <div className="py-20 2xl:py-27" id="work">
       <h1 className="heading">
         {t("smallSelection")}{" "}
         <span className="text-primary">{t("recentProjects")}</span>
