@@ -43,7 +43,7 @@ export default function NavbarComponent() {
       }}
     >
       <NavbarContent>
-        <NavbarMenuToggle className="sm:hidden" />
+        <NavbarMenuToggle className="lg:hidden" />
         <NavbarBrand>
           <Link
             href="/"
@@ -55,7 +55,7 @@ export default function NavbarComponent() {
       </NavbarContent>
 
       {/* Desktop Navigation */}
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex gap-4" justify="center">
         {navLinks.map((link) => (
           <NavbarItem key={link.id}>
             {link.isDownload ? (
@@ -100,7 +100,7 @@ export default function NavbarComponent() {
 
         {/* Desktop Social Icons */}
         {socialIcons.map((social) => (
-          <NavbarItem key={social.name} className="hidden sm:flex gap-2">
+          <NavbarItem key={social.name} className="hidden lg:flex gap-2">
             <Link href={social.url} target="_blank">
               {social.icon}
             </Link>
@@ -108,7 +108,7 @@ export default function NavbarComponent() {
         ))}
 
         {/* Mobile Social Icons Dropdown */}
-        <div className="sm:hidden">
+        <div className="lg:hidden">
           <Dropdown classNames={{ content: "dark:bg-black-100" }}>
             <DropdownTrigger>
               <Button
