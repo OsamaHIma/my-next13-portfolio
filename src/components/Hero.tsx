@@ -40,10 +40,10 @@ export default function Hero() {
       />
       <Spotlight className="right-0 top-28 h-[80vh] w-[50vw]" fill="blue" />
       <div className="py-16 w-full text-center">
-        <BlurFade inView delay={0.2}>
+        {/* <BlurFade inView delay={0.2}> */}
           <p className="whitespace-nowrap sm:text-lg">{t("greeting")}</p>
-        </BlurFade>
-        <BlurFade inView delay={0.4}>
+        {/* </BlurFade> */}
+        {/* <BlurFade inView delay={0.4}> */}
           <AnimatedGradientText>
             <h1
               className={cn(
@@ -53,13 +53,13 @@ export default function Hero() {
               {t("name")}
             </h1>
           </AnimatedGradientText>
-        </BlurFade>
+        {/* </BlurFade> */}
 
-        <BlurFade inView delay={0.7}>
+        {/* <BlurFade inView delay={0.7}> */}
           <h2 className="text-3xl font-poppins md:text-5xl lg:text-7xl font-medium whitespace-nowrap max-sm:mt-2 bg-gradient-to-br from-black-100 dark:from-white from-30% via-[#d5d8f6] via-80% to-[#eee4f0] dark:to-[#fdf7fe] bg-clip-text text-transparent">
             Front-end Developer
           </h2>
-        </BlurFade>
+        {/* </BlurFade> */}
         <TextGenerateEffect
           startOnView
           words={t("subtitle")}
@@ -71,15 +71,15 @@ export default function Hero() {
           className="text-default-800 leading-6 sm:leading-8 text-sm sm:text-lg"
         /> */}
         <div className="mt-7  z-10 flex gap-3 justify-center flex-wrap">
-          <BlurFade inView delay={1.1}>
+          {/* <BlurFade inView delay={1.1}> */}
             <Link href="https://github.com/OsamaHIma" target="_blank">
               <InteractiveHoverButton
                 className="py-3 w-80 ltr:md:w-64"
                 text={t("checkGithub")}
               />
             </Link>
-          </BlurFade>
-          <BlurFade inView delay={1.3}>
+          {/* </BlurFade> */}
+          {/* <BlurFade inView delay={1.3}> */}
             <Link href="mailto:osamahima018@gmail.com?subject=Project%20Inquiry">
               <MagicButton
                 title={t("contactMe")}
@@ -89,7 +89,7 @@ export default function Hero() {
                 otherClasses="rounded-full"
               />
             </Link>
-          </BlurFade>
+          {/* </BlurFade> */}
         </div>
       </div>
 
