@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
-import ReactLenisWrapper from "@/components/ReactLenisWrapper";
+// import ReactLenisWrapper from "@/components/ReactLenisWrapper";
 
 export async function generateMetadata({
   params,
@@ -40,7 +40,7 @@ export async function generateMetadata({
 
 export default function Home() {
   return (
-    <ReactLenisWrapper>
+    <>
       <div className="relative flex justify-center items-center flex-col overflow-clip mx-auto">
         <Navbar />
         <main className="max-w-7xl w-full sm:px-10 px-5">
@@ -52,6 +52,6 @@ export default function Home() {
         </main>
         <Footer />
       </div>
-    </ReactLenisWrapper>
+    </>
   );
 }
