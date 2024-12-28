@@ -1,10 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Button } from "@nextui-org/react";
 import { Spotlight } from "./ui/Spotlight";
 import Link from "next/link";
-import { GithubIcon, NavigationIcon } from "lucide-react";
+import { NavigationIcon } from "lucide-react";
 import BlurFade from "./ui/blur-fade";
 import AnimatedGradientText from "./ui/animated-gradient-text";
 import { cn } from "@/lib/utils";
@@ -18,7 +17,10 @@ export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className="min-h-80 flex items-center relative justify-center container" id="hero">
+    <section
+      className="min-h-80 flex items-center relative justify-center"
+      id="hero"
+    >
       <div className="w-full absolute left-0 top-0">
         <Image
           src="/grid.svg"
@@ -72,7 +74,7 @@ export default function Hero() {
           <BlurFade inView delay={1.1}>
             <Link href="https://github.com/OsamaHIma" target="_blank">
               <InteractiveHoverButton
-                className="py-3 w-64"
+                className="py-3 w-80 md:w-64"
                 text={t("checkGithub")}
               />
             </Link>

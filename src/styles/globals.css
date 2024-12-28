@@ -110,7 +110,7 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply font-bold text-4xl md:text-5xl text-center !leading-[3.3rem] lg:rtl:!leading-[4rem];
   }
 }
 

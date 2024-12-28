@@ -23,7 +23,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw] leading-[3rem] lg:rtl:leading-[4rem]">
+        <h1 className="heading lg:max-w-[45vw]">
           {t("Footer.heading")
             .split(/(?:your|بحضورك)/)
             .map((part, i) =>
@@ -61,9 +61,9 @@ const Footer = () => {
       <div className="flex mt-16 md:flex-row flex-col gap-6 justify-between items-center container z-10">
         <p className="md:text-base text-sm md:font-normal font-light z-10">
           {t("Footer.Copyright")} © 2024{" "}
-          <span className="font-bold bg-gradient-to-tr bg-clip-text text-transparent from-purple-300 from-20% via-50% via-blue-600 to-purple-500">
+          {/* <span className="font-bold bg-gradient-to-tr bg-clip-text text-transparent from-purple-300 from-20% via-50% via-blue-600 to-purple-500">
             {t("Hero.name")}
-          </span>
+          </span> */}
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
