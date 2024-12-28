@@ -25,8 +25,8 @@ export default function Hero() {
         <Image
           src="/grid.svg"
           alt="grid"
-          width={500}
-          height={300}
+          width={351}
+          height={180}
           className="w-full h-full"
         />
       </div>
@@ -95,6 +95,7 @@ export default function Hero() {
 
       <Link
         target="_blank"
+        title="My whatsapp"
         href="https://wa.me/+201090885749"
         className="fixed right-0 bottom-0 size-45 md:size-60 rounded-full overflow-hidden flex items-center justify-center z-50"
       >

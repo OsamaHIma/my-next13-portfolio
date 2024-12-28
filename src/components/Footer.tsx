@@ -3,6 +3,7 @@ import MagicButton from "./ui/MagicButton";
 import { socialIcons } from "@/constants";
 import { useTranslations, useLocale } from "next-intl";
 import { Fragment } from "react";
+import Image from "next/image";
 
 const Footer = () => {
   const t = useTranslations();
@@ -15,9 +16,11 @@ const Footer = () => {
     >
       {/* background grid */}
       <div className="w-full absolute left-0 z-1 -bottom-72 min-h-96">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="grid"
+          width={1260}
+          height={863}
           className="w-full h-full opacity-50"
         />
       </div>
@@ -48,7 +51,10 @@ const Footer = () => {
         <p className="text-default-500 md:mt-10 my-5 text-center">
           {t("Footer.subheading")}
         </p>
-        <a href="mailto:osamahima018@gmail.com?subject=Project%20Inquiry">
+        <a
+          title={t("Hero.contactMe")}
+          href="mailto:osamahima018@gmail.com?subject=Project%20Inquiry"
+        >
           <MagicButton
             title={t("Hero.contactMe")}
             icon={<NavigationIcon />}
@@ -70,6 +76,7 @@ const Footer = () => {
           {socialIcons.map((info) => (
             <a
               key={info.name}
+              title={info.name}
               href={info.url}
               target="_blank"
               className="w-10 h-10 z-10 flex justify-center items-center text-white bg-gradient-to-tr from-blue-600 to-purple-500 rounded-lg"

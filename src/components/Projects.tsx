@@ -44,8 +44,8 @@ const RecentProjects = () => {
                   <Image 
                     src="/bg.png" 
                     alt="Background pattern"
-                    width={500}
-                    height={300}
+                    width={552}
+                    height={330}
                     className="w-full h-full"
                   />
                 </div>

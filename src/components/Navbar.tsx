@@ -114,6 +114,7 @@ export default function NavbarComponent() {
               <Button
                 variant="light"
                 isIconOnly
+                title="Show social icons"
                 startContent={<Menu className="h-5 w-5" />}
               />
             </DropdownTrigger>
