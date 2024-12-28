@@ -54,7 +54,7 @@ const RecentProjects = () => {
                   alt={`${item.name} preview`}
                   width={800}
                   height={400}
-                  className="z-10 absolute max-h-64 w-full object-top object-cover group-hover:rotate-0 transition-all bottom-3 sm:bottom-7 rotate-[5deg] rounded-2xl max-w-[93%]"
+                  className="z-10 absolute max-h-full w-full object-top object-cover group-hover:rotate-0 transition-all bottom-3 sm:bottom-7 rotate-[5deg] rounded-2xl max-w-[93%]"
                 />
               </div>
 
