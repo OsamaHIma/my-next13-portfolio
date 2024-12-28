@@ -1,0 +1,85 @@
+{
+  "Navigation": {
+    "languageSelector": "Select Language",
+    "english": "English",
+    "arabic": "العربية",
+    "About Me": "About Me",
+    "My Experience": "My Experience",
+    "My Work": "My Work",
+    "Contact Me": "Contact Me"
+  },
+  "Hero": {
+    "greeting": " Greetings, my name is",
+    "name": "Osama Ibrahim",
+    "subtitle": "Front-end developer specializing in React.js and Next.js with extensive JavaScript experience",
+    "subtitle2": "Committed to delivering optimized, high-quality code that exceeds client expectations",
+    "contactMe": "Contact Me",
+    "checkGithub": "Check out my GitHub!"
+  },
+  "Experience": {
+    "title": "My",
+    "title2": "work experience",
+    "viewCertificate": "View Certificate",
+    "descriptions": {
+      "tazamun": "Working on enterprise-level web applications using React.js and Next.js, focusing on responsive development, API integration, and state management with Redux Toolkit and React Query.",
+      "etrevago": "Developed modern web applications using React.js and Material-UI, implementing Redux for state management and creating reusable component libraries.",
+      "htmlCert": "Comprehensive certification in web development fundamentals, covering HTML5, CSS3, responsive design, and JavaScript basics.",
+      "jsCert": "Advanced JavaScript programming certification covering ES6+, async programming, OOP principles, and modern JS practices.",
+      "reactCert": "In-depth React.js certification focusing on modern development practices, state management, API integration, and testing."
+    }
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "liveDemoLabel": "Live Demo",
+    "smallSelection": "A small selection of",
+    "recentProjects": "recent projects",
+    "descriptions": {
+      "orenus": "A comprehensive business management platform with web and mobile interfaces. Features include state management with Preact-signals, form validation using Yup and React-hook-form, and API integration using Axios and React-query. Includes a standalone admin dashboard.",
+      "arabGiftCardCorp": "A dynamic corporate website for a UAE-based digital gift card company. Features headless CMS using Sanity.io for content management.",
+      "astashirni": "A comprehensive legal consultation platform connecting users with experienced lawyers. Includes both landing page and administrative dashboard.",
+      "arabGiftCardEcom": "A full-featured e-commerce platform for digital gift cards with multi-language support and real-time data fetching.",
+      "chatHub": "A real-time messaging platform built with the MERN stack, enhanced with Next.js for the frontend. The application enables secure and seamless communication between users.",
+      "tumorScan": "Tumor Scan is a cancer diagnosis platform that leverages advanced imaging and AI. For this project, I gained experience integrating various technologies like Python, Flask, and front-end web development. I was responsible for the full-stack - building the backend APIs, designing the UI/UX, and creating a seamless user experience from front to back. This challenged me to quickly adapt to new skills which was a valuable learning experience.",
+      "aiBreedFinder": "This project helps users identify the breed of their pets, whether it's a dog, cat, or any other animal. The AI algorithms analyze the unique characteristics of the pet and provide accurate breed predictions."
+    }
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "backButton": "Go Back",
+    "homeButton": "Go Home",
+    "ornamentalText": "Lost in the digital space"
+  },
+  "Skills": {
+    "workSkills": {
+      "skill1": "Developed and optimized dynamic web applications using React.js and Tailwind CSS",
+      "skill2": "Collaborated with backend teams to integrate APIs, ensuring seamless data flow and UI functionality",
+      "skill3": "Implemented responsive design principles for consistent user experience across devices",
+      "skill4": "Built interactive UI components using Next.js and Redux Toolkit",
+      "skill5": "Streamlined front-end workflows with TypeScript, improving code readability and maintainability",
+      "skill6": "Tested and deployed web applications, focusing on cross-browser compatibility and performance",
+      "skill7": "Implemented state management with Preact-signals and form validation using Yup and React-hook-form",
+      "skill8": "Built API integration using Axios and React-query for efficient data handling"
+    }
+  },
+  "Nav": {
+    "about": "About Me",
+    "experience": "My Experience",
+    "work": "My Work",
+    "contact": "Contact Me"
+  },
+  "Github": {
+    "title": "GitHub Statistics",
+    "repositories": "Repositories",
+    "stars": "Total Stars",
+    "commits": "Total Commits",
+    "forks": "Total Forks",
+    "loading": "Loading statistics...",
+    "error": "Failed to load GitHub statistics"
+  },
+  "Footer": {
+    "Copyright": "Copyright",
+    "heading": "Ready to take your digital presence to the next level?",
+    "subheading": "Reach out to me today and let's discuss how I can help you achieve your goals."
+  }
+}
