@@ -37,13 +37,14 @@ const Experience = () => {
               />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
+                  {/* {card.title} */}
+                  {t(card.company)}
                 </h1>
                 <p className="text-start text-gray-600 dark:text-white-100 mt-3 font-semibold">
                   {t(card.description)}
                 </p>
-                <div className="text-start space-y-0.5 text-sm text-default-500 -mb-2 sm:-mb-5 mt-1">
-                  <p className="text-default-900 font-semibold">{t(card.company)}</p>
+                <div className="text-start space-y-0.5 text-sm text-default-500 -mb-2 lg:-mb-5 mt-2">
+                  {/* <p className="text-default-900 font-semibold"></p> */}
                   <p>
                     {t(card.location)} | {t(card.date)}
                   </p>

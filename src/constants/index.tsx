@@ -86,9 +86,17 @@ export const workSkills = [
 ];
 
 export const experiences = [
+  // {
+  //   title: "Freelance Front-end Developer",
+  //   company: "Self-employed",
+  //   location: "Experience.locations.freelance",
+  //   date: "Experience.dates.freelance",
+  //   icon: "/companies/freelance.png",
+  //   description: "Experience.descriptions.freelance",
+  // },
   {
     title: "Front-end Developer",
-    company: "Tazamun Information Technology",
+    company: "Tazamun IT",
     location: "Experience.locations.tazamun",
     date: "Experience.dates.tazamun",
     icon: "/companies/tazamun.jpg",
