@@ -94,7 +94,7 @@ export default function Hero() {
       <Link
         target="_blank"
         href="https://wa.me/+201090885749"
-        className="fixed right-0 bottom-0 size-60 rounded-full overflow-hidden flex items-center justify-center"
+        className="fixed right-0 bottom-0 size-60 rounded-full overflow-hidden flex items-center justify-center z-10"
       >
         <Ripple mainCircleSize={10} mainCircleOpacity={0.4} />
 
