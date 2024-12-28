@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Spotlight } from "./ui/Spotlight";
 import Link from "next/link";
 import { NavigationIcon } from "lucide-react";
-import BlurFade from "./ui/blur-fade";
+// import BlurFade from "./ui/blur-fade";
 import AnimatedGradientText from "./ui/animated-gradient-text";
 import { cn } from "@/lib/utils";
 import MagicButton from "./ui/MagicButton";
