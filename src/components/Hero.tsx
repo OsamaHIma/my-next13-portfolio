@@ -27,6 +27,7 @@ export default function Hero() {
           alt="grid"
           width={351}
           height={180}
+          loading="eager"
           className="w-full h-full"
         />
       </div>
