@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-80 flex items-center relative justify-center"
+      className="min-h-80 lg:min-h-[550px] flex items-center relative justify-center"
       id="hero"
     >
       <div className="w-full absolute left-0 top-0">
