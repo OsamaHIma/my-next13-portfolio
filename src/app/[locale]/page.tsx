@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import ReactLenisWrapper from "@/components/ReactLenisWrapper";
+import MobileNav from "@/components/MobileNav";
 
 export async function generateMetadata({
   params,
@@ -41,9 +42,10 @@ export async function generateMetadata({
 export default function Home() {
   return (
     <ReactLenisWrapper>
-      <div className="relative flex justify-center items-center flex-col overflow-clip mx-auto">
+      <div className="relative flex justify-center items-center flex-col overflow-clip mx-auto max-lg:pb-13">
         <Navbar />
-        <main className="max-w-7xl w-full sm:px-10 px-5">
+        <MobileNav />
+        <main className="max-w-7xl w-full sm:px-10 px-5 ">
           <Hero />
           <Projects />
           <div className="absolute -z-[1] top-[50%] left-[5%] size-80 bg-blue-500/30 blur-[100px]" />

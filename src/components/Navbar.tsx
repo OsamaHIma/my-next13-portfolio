@@ -8,8 +8,6 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
@@ -18,7 +16,7 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter, useParams } from "next/navigation";
-import { LanguagesIcon, Menu } from "lucide-react";
+import { LanguagesIcon, Menu, PlusCircle } from "lucide-react";
 import { ThemeSwitch } from "./theme-switch";
 
 export default function NavbarComponent() {
@@ -43,7 +41,6 @@ export default function NavbarComponent() {
       }}
     >
       <NavbarContent>
-        <NavbarMenuToggle className="lg:hidden" />
         <NavbarBrand>
           <Link
             href="/"
@@ -63,15 +60,19 @@ export default function NavbarComponent() {
                 href={link.id}
                 download
                 target="_blank"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary flex items-center gap-2 transition-colors"
               >
+                {link.icon && <link.icon size={18} />}
                 {t(link.name)}
               </a>
             ) : (
               <Link
                 href={link.id}
-                className={pathname === link.id ? "text-primary" : ""}
+                className={`flex items-center gap-2 ${
+                  pathname === link.id && "text-primary"
+                }`}
               >
+                {link.icon && <link.icon size={18} />}
                 {t(link.name)}
               </Link>
             )}
@@ -109,13 +110,13 @@ export default function NavbarComponent() {
 
         {/* Mobile Social Icons Dropdown */}
         <div className="lg:hidden">
-          <Dropdown classNames={{ content: "dark:bg-black-100" }}>
+          <Dropdown classNames={{ content: "dark:bg-black-100 !font-poppins" }}>
             <DropdownTrigger>
               <Button
                 variant="light"
                 isIconOnly
                 title="Show social icons"
-                startContent={<Menu className="h-5 w-5" />}
+                startContent={<PlusCircle className="h-5 w-5" />}
               />
             </DropdownTrigger>
             <DropdownMenu aria-label="Social Links">
@@ -140,31 +141,6 @@ export default function NavbarComponent() {
       </NavbarContent>
 
       {/* Mobile Menu */}
-      <NavbarMenu>
-        {navLinks.map((link) => (
-          <NavbarMenuItem key={link.id}>
-            {link.isDownload ? (
-              <a
-                href={link.id}
-                download
-                target="_blank"
-                className="w-full hover:text-primary transition-colors"
-              >
-                {t(link.name)}
-              </a>
-            ) : (
-              <Link
-                href={link.id}
-                className={`w-full ${
-                  pathname === link.id ? "text-primary" : ""
-                }`}
-              >
-                {t(link.name)}
-              </Link>
-            )}
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
 }

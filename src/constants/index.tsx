@@ -1,26 +1,34 @@
-import { FacebookIcon, LinkedinIcon, GithubIcon } from "lucide-react";
+import {
+  FacebookIcon,
+  LinkedinIcon,
+  GithubIcon,
+  Briefcase,
+  FileText,
+  MessageCircle,
+  BriefcaseBusiness,
+} from "lucide-react";
 
 export const navLinks = [
-  // {
-  //   id: "/#about",
-  //   name: "About Me",
-  // },
   {
     id: "/#experience",
     name: "My Experience",
+    icon: Briefcase, // Icon for "My Experience"
   },
   {
     id: "/#work",
     name: "My Work",
+    icon: BriefcaseBusiness, // Icon for "My Work"
   },
   {
     id: "/#contact",
     name: "Contact Me",
+    icon: MessageCircle, // Icon for "Contact Me"
   },
   {
     id: "/Osama-Ibrahim-CV.pdf",
     name: "Download CV",
-    isDownload: true, // Add this flag to handle download behavior differently in your navigation component
+    isDownload: true, // Flag for download behavior
+    icon: FileText, // Icon for "Download CV"
   },
 ];
 

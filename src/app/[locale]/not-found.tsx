@@ -54,7 +54,7 @@ export default function NotFound() {
             color="default"
             variant="bordered"
             size="lg"
-            onClick={() => router.push("/")}
+            onPress={() => router.push("/")}
             className="font-semibold"
           >
             {t("homeButton")}
