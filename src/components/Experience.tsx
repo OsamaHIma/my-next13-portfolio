@@ -3,6 +3,7 @@ import { Button } from "./ui/MovingBorders";
 import { experiences } from "@/constants";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const Experience = () => {
   const t = useTranslations();
@@ -33,12 +34,17 @@ const Experience = () => {
                 alt={card.title}
                 width={128}
                 height={128}
-                className="lg:w-32 md:w-20 w-16 rounded-full"
+                className={cn(
+                  "lg:w-32 md:w-20 w-16 rounded-full p-1",
+                  card.icon === "/companies/softLab.png"
+                    ? "bg-white flex items-center justify-center lg:h-32 md:h-20 h-16 object-contain"
+                    : ""
+                )}
               />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {/* {card.title} */}
                   {card.company}
+                  <br /> <p className="text-sm block text-gray-400" > {card.title}</p>
                 </h1>
                 <p className="text-start text-gray-600 dark:text-white-100 mt-3 font-semibold">
                   {t(card.description)}

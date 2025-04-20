@@ -32,7 +32,7 @@ const RecentProjects = () => {
               glareBorderRadius="16px"
               className={cn(
                 "rounded-2xl group relative border h-full border-default-300 transition duration-700 overflow-hidden py-3 px-5",
-                index === 6 && "col-span-full"
+                item?.isFeatured && "col-span-full"
               )}
               glareEnable
               glareMaxOpacity={0.2}
@@ -41,8 +41,8 @@ const RecentProjects = () => {
             >
               <div className="relative flex items-center justify-center w-full mb-10">
                 <div className="relative w-full h-full bg-[#13162D] overflow-hidden rounded-3xl">
-                  <Image 
-                    src="/bg.png" 
+                  <Image
+                    src="/bg.png"
                     alt="Background pattern"
                     width={552}
                     height={330}
@@ -50,7 +50,7 @@ const RecentProjects = () => {
                   />
                 </div>
                 <Image
-                  src={item.image}
+                  src={item.image || ''}
                   alt={`${item.name} preview`}
                   width={1920}
                   height={1080}

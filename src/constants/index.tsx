@@ -94,21 +94,21 @@ export const workSkills = [
 ];
 
 export const experiences = [
-  // {
-  //   title: "Freelance Front-end Developer",
-  //   company: "Self-employed",
-  //   location: "Experience.locations.freelance",
-  //   date: "Experience.dates.freelance",
-  //   icon: "/companies/freelance.png",
-  //   description: "Experience.descriptions.freelance",
-  // },
   {
-    title: "Front-end Developer",
+    title: "Front-end Developer full-time",
     company: "Tazamun IT",
     location: "Experience.locations.tazamun",
     date: "Experience.dates.tazamun",
     icon: "/companies/tazamun.jpg",
     description: "Experience.descriptions.tazamun",
+  },
+  {
+    title: "Front-end Developer part-time",
+    company: "SoftLab",
+    location: "Experience.locations.softLab",
+    date: "Experience.dates.softLab",
+    icon: "/companies/softLab.png",
+    description: "Experience.descriptions.softLab",
   },
   {
     title: "Front-end Developer",
@@ -183,7 +183,6 @@ export const projects = [
       { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
       { name: "Sanity.io", img: "/tech/sanity.svg" },
     ],
-    isFeatured: true,
     image: "/projects/arabgiftcard.png",
     live_preview: "https://arabgiftcard.ae",
   },
@@ -200,7 +199,6 @@ export const projects = [
       { name: "TypeScript", img: "/tech/typescript.svg" },
       { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
     ],
-    isFeatured: true,
     image: "/projects/astashirni.png",
     live_preview: "https://astashirni.com/landing",
   },
@@ -225,6 +223,22 @@ export const projects = [
     live_preview: "https://orenus.net",
   },
   {
+    name: "Trekio",
+    description: "descriptions.trekio",
+    tags: [
+      { name: "Laravel", img: "/tech/laravel.svg" },
+      {
+        name: "Inertia.js",
+        img: "/tech/inertiajs.png",
+      },
+      { name: "React.js", img: "/tech/reactjs.png" },
+      { name: "TypeScript", img: "/tech/typescript.svg" },
+      { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
+    ],
+    image: "/projects/trekio.png",
+    live_preview: "https://trekio.net",
+  },
+  {
     name: "ArabGiftCard E-commerce",
     description: "descriptions.arabGiftCardEcom",
     tags: [
@@ -236,7 +250,6 @@ export const projects = [
         img: "/tech/react-query.png",
       },
     ],
-    isFeatured: true,
     image: "/projects/arabgiftcard-store.png",
     live_preview: "https://arabgiftcard.com",
   },
@@ -251,7 +264,6 @@ export const projects = [
       { name: "Socket.io", img: "/tech/socket_io.svg" },
       { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
     ],
-    isFeatured: true,
     image: "/projects/chatHub.png",
     source_code_link: "https://github.com/OsamaHIma/ChatHub",
     live_preview: "https://chathub-web.vercel.app/",
@@ -268,7 +280,6 @@ export const projects = [
       { name: "Firebase", img: "/tech/firebase.svg" },
       { name: "Tailwind css", img: "/tech/tailwind.svg" },
     ],
-    isFeatured: true,
     image: "/projects/tumor scan.png",
     // source_code_link: "https://github.com/OsamaHIma/worker-app",
     live_preview: "https://tumor-scan.vercel.app/",
@@ -285,7 +296,6 @@ export const projects = [
       { name: "Firebase", img: "/tech/firebase.svg" },
       { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
     ],
-    isFeatured: true,
     image: "/projects/ai-breed-finder.png",
     // source_code_link: "https://github.com/OsamaHIma/worker-app",
     live_preview: "https://ai-breed-finder.vercel.app/",
