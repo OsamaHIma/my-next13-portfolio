@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
-import ReactLenisWrapper from "@/components/ReactLenisWrapper";
 import MobileNav from "@/components/MobileNav";
 
 export async function generateMetadata({
@@ -41,7 +40,7 @@ export async function generateMetadata({
 
 export default function Home() {
   return (
-    <ReactLenisWrapper>
+
       <div className="relative flex justify-center items-center flex-col overflow-clip mx-auto max-lg:pb-13">
         <Navbar />
         <MobileNav />
@@ -54,6 +53,6 @@ export default function Home() {
         </main>
         <Footer />
       </div>
-    </ReactLenisWrapper>
+
   );
 }
