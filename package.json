@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/bg.png"
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.10",
