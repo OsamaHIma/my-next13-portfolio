@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Button, Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
-import { Download, Share2 } from "lucide-react";
+import { Download, Share2, Menu } from "lucide-react";
 
 export default function InstallPrompt() {
   const [isIOS, setIsIOS] = useState(false);
+  const [isAndroid, setIsAndroid] = useState(false);
   const [isStandalone, setIsStandalone] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstallable, setIsInstallable] = useState(false);
@@ -12,6 +13,10 @@ export default function InstallPrompt() {
   useEffect(() => {
     setIsIOS(
       /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
+    );
+    
+    setIsAndroid(
+      /Android/.test(navigator.userAgent)
     );
 
     setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
@@ -34,7 +39,7 @@ export default function InstallPrompt() {
   }, []);
 
   const handleInstallClick = async () => {
-    if (!deferredPrompt && !isIOS) return;
+    if (!deferredPrompt && !isIOS && !isAndroid) return;
     
     if (deferredPrompt) {
       // Show the install prompt
@@ -83,14 +88,26 @@ export default function InstallPrompt() {
           Add to Home Screen
         </Button>
       </CardBody>
-      {isIOS && (
+      {(isIOS || isAndroid) && (
         <CardFooter className="bg-gray-50/50 dark:bg-gray-900/50 border-t border-gray-200 dark:border-gray-800 gap-2">
-          <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center flex-wrap">
-            <span>To install on iOS, tap</span>
-            <Share2 className="mx-1 size-4 inline-block text-gray-600 dark:text-gray-300" />
-            <span>and then</span>
-            <span className="font-medium">"Add to Home Screen"</span>
-          </div>
+          {isIOS && (
+            <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center flex-wrap">
+              <span>To install on iOS, tap</span>
+              <Share2 className="mx-1 size-4 inline-block text-gray-600 dark:text-gray-300" />
+              <span>and then</span>
+              <span className="font-medium">"Add to Home Screen"</span>
+            </div>
+          )}
+          {isAndroid && (
+            <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center flex-wrap">
+              <span>To install on Android, tap</span>
+              <Menu className="mx-1 size-4 inline-block text-gray-600 dark:text-gray-300" />
+              <span>and select</span>
+              <span className="font-medium">"Install App"</span>
+              <span>or</span>
+              <span className="font-medium">"Add to Home Screen"</span>
+            </div>
+          )}
         </CardFooter>
       )}
     </Card>
