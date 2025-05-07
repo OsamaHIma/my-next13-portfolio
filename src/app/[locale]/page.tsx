@@ -4,7 +4,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
-import InstallPrompt from "@/components/InstallPrompt";
+// import InstallPrompt from "@/components/InstallPrompt";
 
 export async function generateMetadata({
   params,
@@ -49,7 +49,7 @@ export default function Home() {
     <div className="relative flex justify-center items-center flex-col overflow-clip mx-auto max-lg:pb-13">
       <Navbar />
       <MobileNav />
-      <InstallPrompt />
+      {/* <InstallPrompt /> */}
       <main className="max-w-7xl w-full sm:px-10 px-5 ">
         <Hero />
         <Projects />
