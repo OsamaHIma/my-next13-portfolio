@@ -15,6 +15,10 @@ export async function generateMetadata({
   return {
     metadataBase: new URL("https://osama-ibrahim-portfolio.vercel.app"),
     manifest: "/manifest.json",
+    themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
+    viewport:
+      "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
+    generator: "Next.js",
     title:
       locale === "ar"
         ? "أسامة إبراهيم | مطور واجهات أمامية"
