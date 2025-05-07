@@ -58,7 +58,7 @@ export default function InstallPrompt() {
   }
 
   return (
-    <Card className="w-full pt-3 max-w-md mx-auto bg-white/80 dark:bg-black-100/80 backdrop-blur-sm shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in">
+    <Card className="w-full mt-3 max-w-md mx-auto bg-white/80 dark:bg-black-100/80 backdrop-blur-sm shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in">
       <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
