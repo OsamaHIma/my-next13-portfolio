@@ -10,7 +10,7 @@ const MobileNav = () => {
   const pathname = usePathname();
   const t = useTranslations("Navigation");
   return (
-    <nav className="fixed bottom-0 z-[53] left-0 right-0 bg-background/70 backdrop-blur-xl border-t lg:hidden">
+    <nav className="fixed bottom-0 z-53 left-0 right-0 bg-background/70 backdrop-blur-xl border-t lg:hidden">
       <div className="flex justify-around items-center h-16">
         {navLinks?.map((link, index) =>
           link.isDownload ? (

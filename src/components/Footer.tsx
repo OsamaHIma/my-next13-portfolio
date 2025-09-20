@@ -33,7 +33,7 @@ const Footer = () => {
               i === 0 ? (
                 <Fragment key={i}>
                   {part}
-                  <span className="bg-gradient-to-tr bg-clip-text text-transparent from-purple-200 from-40% via-80% via-blue-600 to-purple-500">
+                  <span className="bg-linear-to-tr bg-clip-text text-transparent from-purple-200 from-40% via-80% via-blue-600 to-purple-500">
                     {t("Footer.heading").includes(
                       local === "ar" ? "بحضورك" : "your"
                     )
@@ -67,7 +67,7 @@ const Footer = () => {
       <div className="flex mt-16 md:flex-row flex-col gap-6 justify-between items-center container z-10">
         <p className="md:text-base text-sm md:font-normal font-light z-10">
           {t("Footer.Copyright")} © 2024{" "}
-          {/* <span className="font-bold bg-gradient-to-tr bg-clip-text text-transparent from-purple-300 from-20% via-50% via-blue-600 to-purple-500">
+          {/* <span className="font-bold bg-linear-to-tr bg-clip-text text-transparent from-purple-300 from-20% via-50% via-blue-600 to-purple-500">
             {t("Hero.name")}
           </span> */}
         </p>
@@ -79,7 +79,7 @@ const Footer = () => {
               title={info.name}
               href={info.url}
               target="_blank"
-              className="w-10 h-10 z-10 flex justify-center items-center text-white bg-gradient-to-tr from-blue-600 to-purple-500 rounded-lg"
+              className="w-10 h-10 z-10 flex justify-center items-center text-white bg-linear-to-tr from-blue-600 to-purple-500 rounded-lg"
             >
               {info?.icon}
             </a>

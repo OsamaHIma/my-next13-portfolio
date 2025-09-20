@@ -37,7 +37,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
-        className={`${cairo.variable} ${poppins.variable} dark:bg-black-100 transition-colors duration-300 ltr:!font-poppins rtl:!font-cairo`}
+        className={`${cairo.variable} ${poppins.variable} dark:bg-black-100 transition-colors duration-300 ltr:font-poppins! rtl:font-cairo!`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>{children}</Providers>

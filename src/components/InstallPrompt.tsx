@@ -58,7 +58,7 @@ export default function InstallPrompt() {
   }
 
   return (
-    <Card className="w-full mt-3 max-w-md mx-auto bg-white/80 dark:bg-black-100/80 backdrop-blur-sm shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in">
+    <Card className="w-full mt-3 max-w-md mx-auto bg-white/80 dark:bg-black-100/80 backdrop-blur-xs shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in">
       <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
@@ -76,7 +76,7 @@ export default function InstallPrompt() {
       </CardHeader>
       <CardBody className="py-4">
         <Button 
-          className="bg-gradient-to-tr from-purple-500 to-blue-500 text-white shadow-md hover:shadow-lg transition-all duration-300 font-medium" 
+          className="bg-linear-to-tr from-purple-500 to-blue-500 text-white shadow-md hover:shadow-lg transition-all duration-300 font-medium" 
           startContent={<Download className="size-4" />}
           size="lg"
           radius="md"

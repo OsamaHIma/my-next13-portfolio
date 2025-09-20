@@ -19,7 +19,7 @@ export default function NotFound() {
   return (
     <html>
       <body
-        className={`${poppins.variable} relative overflow-x-hidden min-h-screen !font-poppins bg-gradient-to-b from-gray-50 to-gray-100 dark:from-black-100 dark:to-black-200 flex items-center justify-center px-4`}
+        className={`${poppins.variable} relative overflow-x-hidden min-h-screen font-poppins! bg-linear-to-b from-gray-50 to-gray-100 dark:from-black-100 dark:to-black-200 flex items-center justify-center px-4`}
       >
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20"
@@ -93,7 +93,7 @@ export default function NotFound() {
                   <div className="w-full border-t border-gray-300 dark:border-gray-600" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-500 dark:text-gray-400">
+                  <span className="px-2 bg-linear-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-500 dark:text-gray-400">
                     Lost in the digital space
                   </span>
                 </div>

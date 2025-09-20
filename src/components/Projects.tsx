@@ -101,7 +101,7 @@ const RecentProjects = () => {
                     
                     {/* Hover overlay with zoom icon */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <div className="bg-white/20 backdrop-blur-xs rounded-full p-3">
                         <ZoomIn className="w-6 h-6 text-white" />
                       </div>
                     </div>

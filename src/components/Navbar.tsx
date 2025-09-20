@@ -37,14 +37,14 @@ export default function NavbarComponent() {
       shouldHideOnScroll
       isBordered
       classNames={{
-        base: "z-[999]",
+        base: "z-999",
       }}
     >
       <NavbarContent>
         <NavbarBrand>
           <Link
             href="/"
-            className="font-bold bg-gradient-to-tr bg-clip-text text-transparent from-purple-200 via-blue-600 to-purple-500"
+            className="font-bold bg-linear-to-tr bg-clip-text text-transparent from-purple-200 via-blue-600 to-purple-500"
           >
             Osama Ibrahim
           </Link>
@@ -110,7 +110,7 @@ export default function NavbarComponent() {
 
         {/* Mobile Social Icons Dropdown */}
         <div className="lg:hidden">
-          <Dropdown classNames={{ content: "dark:bg-black-100 !font-poppins" }}>
+          <Dropdown classNames={{ content: "dark:bg-black-100 font-poppins!" }}>
             <DropdownTrigger>
               <Button
                 variant="light"
