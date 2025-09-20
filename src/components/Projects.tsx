@@ -4,15 +4,50 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Tooltip } from "@nextui-org/react";
 import { projects } from "@/constants";
-import { NavigationIcon } from "lucide-react";
+import { NavigationIcon, ZoomIn } from "lucide-react";
 import Tilt from "react-parallax-tilt";
 import { cn } from "@/lib/utils";
 import BlurFade from "./ui/blur-fade";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
+import ImageModal from "./ui/ImageModal";
 
 const RecentProjects = () => {
   const t = useTranslations("Projects");
+  const [modalState, setModalState] = React.useState<{
+    isOpen: boolean;
+    images: string[];
+    initialIndex: number;
+    projectName: string;
+  }>({
+    isOpen: false,
+    images: [],
+    initialIndex: 0,
+    projectName: "",
+  });
+
+  /**
+   * Opens the image modal with the specified project images
+   * @param images - Array of image URLs
+   * @param initialIndex - Index of the image to display first
+   * @param projectName - Name of the project for accessibility
+   */
+  const openModal = (images: string[], initialIndex: number, projectName: string) => {
+    setModalState({
+      isOpen: true,
+      images,
+      initialIndex,
+      projectName,
+    });
+  };
+
+  /**
+   * Closes the image modal
+   */
+  const closeModal = () => {
+    setModalState(prev => ({ ...prev, isOpen: false }));
+  };
+
   return (
     <div className="py-20 2xl:py-27" id="work">
       <h1 className="heading">
@@ -49,13 +84,36 @@ const RecentProjects = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <Image
-                  src={item.image || ''}
-                  alt={`${item.name} preview`}
-                  width={1920}
-                  height={1080}
-                  className="z-10 absolute max-h-full w-full object-top object-cover group-hover:rotate-0 transition-all bottom-3 sm:bottom-7 rotate-[5deg] rounded-2xl max-w-[93%]"
-                />
+                
+                {/* Main project image with click functionality */}
+                <div 
+                  className="z-10 absolute max-h-full w-full bottom-3 sm:bottom-7 max-w-[93%] cursor-pointer group/image"
+                  onClick={() => openModal(item.images, 0, item.name)}
+                >
+                  <div className="relative">
+                    <Image
+                      src={item.images[0] || ''}
+                      alt={`${item.name} preview`}
+                      width={1920}
+                      height={1080}
+                      className="w-full object-top object-cover group-hover:rotate-0 transition-all rotate-[5deg] rounded-2xl"
+                    />
+                    
+                    {/* Hover overlay with zoom icon */}
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                        <ZoomIn className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                    
+                    {/* Multiple images indicator */}
+                    {item.images.length > 1 && (
+                      <div className="absolute top-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
+                        +{item.images.length - 1} more
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -104,6 +162,15 @@ const RecentProjects = () => {
           </BlurFade>
         ))}
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        images={modalState.images}
+        initialIndex={modalState.initialIndex}
+        projectName={modalState.projectName}
+      />
     </div>
   );
 };

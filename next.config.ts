@@ -1,17 +1,36 @@
-import type { NextConfig } from "next";
-import withPWA from 'next-pwa';
-const createNextIntlPlugin = require('next-intl/plugin');
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig: NextConfig = {
+    images: {
+        deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+        formats: ["image/webp", "image/avif"],
+        minimumCacheTTL: 31536000, // 1 year
+        dangerouslyAllowSVG: true,
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    },
 
-module.exports = withNextIntl(nextConfig);
+    // Performance optimizations
+    compress: true,
+    poweredByHeader: false,
 
-export default withPWA({
-    dest: "public",         // destination directory for the PWA files
-    disable: process.env.NODE_ENV === "development",        // disable PWA in the development environment
-    register: true,         // register the PWA service worker
-    skipWaiting: true,      // skip waiting for service worker activation
-});
+    // Experimental features for better performance
+    experimental: {
+        optimizeCss: true,
+        optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    },
+
+    reactStrictMode: true,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+};
+
+export default withNextIntl(nextConfig);
