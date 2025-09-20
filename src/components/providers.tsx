@@ -3,10 +3,10 @@
 import type { ThemeProviderProps } from "next-themes";
 
 import * as React from "react";
-import { HeroUIProvider } from "@heroui/system";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react"
+import { HeroUIProvider } from "@heroui/react";
 
 export interface ProvidersProps {
   children: React.ReactNode;
