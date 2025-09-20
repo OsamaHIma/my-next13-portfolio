@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { Poppins } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { Spotlight } from "@/components/ui/Spotlight";

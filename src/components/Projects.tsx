@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Tooltip } from "@nextui-org/react";
+import { Tooltip } from "@heroui/react";
 import { projects } from "@/constants";
 import { NavigationIcon, ZoomIn } from "lucide-react";
 import Tilt from "react-parallax-tilt";

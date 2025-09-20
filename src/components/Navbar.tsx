@@ -13,7 +13,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import Link from "next/link";
 import { useRouter, useParams } from "next/navigation";
 import { LanguagesIcon, Menu, PlusCircle } from "lucide-react";

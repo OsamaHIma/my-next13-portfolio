@@ -3,7 +3,7 @@
 import type { ThemeProviderProps } from "next-themes";
 
 import * as React from "react";
-import { NextUIProvider } from "@nextui-org/system";
+import { HeroUIProvider } from "@heroui/system";
 import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react"
@@ -23,7 +23,7 @@ declare module "@react-types/shared" {
 
 export function Providers({ children, themeProps }: ProvidersProps) {
   return (
-    <NextUIProvider>
+    <HeroUIProvider>
       <NextThemesProvider
         attribute="class"
         defaultTheme="dark"
@@ -33,6 +33,6 @@ export function Providers({ children, themeProps }: ProvidersProps) {
         {children}
         <Analytics />
       </NextThemesProvider>
-    </NextUIProvider>
+    </HeroUIProvider>
   );
 }

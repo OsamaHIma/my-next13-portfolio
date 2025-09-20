@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Button, Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, CardHeader } from "@heroui/react";
 import { Download, Share2, Menu } from "lucide-react";
 
 export default function InstallPrompt() {
