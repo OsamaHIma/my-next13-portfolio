@@ -175,6 +175,54 @@ export const certificates = [
 
 export const projects = [
   {
+    name: "Fantasy Pro Manager",
+    description: "descriptions.fantasyProManager",
+    tags: [
+      { name: "Next.js", img: "/tech/nextjs.png" },
+      { name: "TypeScript", img: "/tech/typescript.svg" },
+      { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
+      { name: "React Query", img: "/tech/react-query.png" },
+    ],
+    image: "/projects/fantasy-pro-manager.png",
+    live_preview: "https://fantasypromanager.com/ar",
+    isFeatured: true,
+  },
+  {
+    name: "Fantasy Pro Manager — Expert & Admin Dashboards",
+    description: "descriptions.fantasyProManagerDashboards",
+    tags: [
+      { name: "React.js", img: "/tech/reactjs.png" },
+      { name: "Laravel", img: "/tech/laravel.svg" },
+      { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
+      { name: "React Query", img: "/tech/react-query.png" },
+    ],
+    image: "/projects/fantasy-pro-manager-dashboards.png",
+  },
+  {
+    name: "MASA Platform",
+    description: "descriptions.masaPlatform",
+    tags: [
+      { name: "Next.js", img: "/tech/nextjs.png" },
+      { name: "TypeScript", img: "/tech/typescript.svg" },
+      { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
+      { name: "React Query", img: "/tech/react-query.png" },
+    ],
+    image: "/projects/masa-platform.png",
+    live_preview: "https://masa-new-front.vercel.app",
+  },
+  {
+    name: "Kayan Bookstore E-commerce",
+    description: "descriptions.kayanBookstore",
+    tags: [
+      { name: "Next.js", img: "/tech/nextjs.png" },
+      { name: "TypeScript", img: "/tech/typescript.svg" },
+      { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
+      { name: "React Query", img: "/tech/react-query.png" },
+    ],
+    image: "/projects/kayan-bookstore.png",
+    live_preview: "https://kayanbookstore.com",
+  },
+  {
     name: "ArabGiftCard Corporate",
     description: "descriptions.arabGiftCardCorp",
     tags: [
