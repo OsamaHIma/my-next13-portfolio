@@ -25,7 +25,7 @@ export const navLinks = [
     icon: MessageCircle, // Icon for "Contact Me"
   },
   {
-    id: "/Osama-Ibrahim-CV.pdf",
+    id: "/osama-ibrahim-frontend-developer.pdf",
     name: "Download CV",
     isDownload: true, // Flag for download behavior
     icon: FileText, // Icon for "Download CV"
@@ -269,7 +269,6 @@ export const projects = [
         img: "/tech/inertiajs.png",
       },
     ],
-    isFeatured: true,
     images: ["/projects/orenus.png"],
     live_preview: "https://orenus.net",
   },
