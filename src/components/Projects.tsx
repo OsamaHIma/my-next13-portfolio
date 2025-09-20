@@ -96,7 +96,7 @@ const RecentProjects = () => {
                       alt={`${item.name} preview`}
                       width={1920}
                       height={1080}
-                      className={cn("w-full h-60 object-top object-cover group-hover:rotate-0 transition-all rotate-[5deg] rounded-2xl", item?.isFeatured && " md:h-[60vh] my-auto" )}
+                      className={cn("w-full h-60 object-top object-cover group-hover:rotate-0 transition-all rotate-[5deg] rounded-2xl", item?.isFeatured && "md:h-[50vh] xl:h-[70vh] my-auto" )}
                     />
                     
                     {/* Hover overlay with zoom icon */}
