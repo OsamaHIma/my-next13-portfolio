@@ -96,15 +96,6 @@ const ImageModal: React.FC<ImageModalProps> = ({
         <DialogTitle className="sr-only">
           {projectName} - Image Gallery
         </DialogTitle>
-        
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors"
-          aria-label="Close image gallery"
-        >
-          <X className="w-6 h-6" />
-        </button>
 
         {/* Image counter */}
         {images.length > 1 && (
@@ -116,14 +107,14 @@ const ImageModal: React.FC<ImageModalProps> = ({
         <div className="w-full h-full flex items-center justify-center p-4">
           {images.length === 1 ? (
             // Single image display with vertical scrolling
-            <div className="w-full h-full overflow-y-auto overflow-x-hidden flex justify-center">
+            <div className="w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-2xl">
               <div className="relative max-w-full">
                 <Image
                   src={images[0]}
                   alt={`${projectName} screenshot`}
                   width={1920}
                   height={1080}
-                  className="max-w-full h-auto object-contain"
+                  className="max-w-full h-full"
                   priority
                 />
               </div>
@@ -140,14 +131,14 @@ const ImageModal: React.FC<ImageModalProps> = ({
               <CarouselContent className="h-full">
                 {images.map((image, index) => (
                   <CarouselItem key={index} className="h-full">
-                    <div className="w-full h-full overflow-y-auto overflow-x-hidden flex justify-center">
+                    <div className="w-full max-h-[90vh] overflow-y-auto overflow-x-hidden rounded-2xl">
                       <div className="relative max-w-full">
                         <Image
                           src={image}
                           alt={`${projectName} screenshot ${index + 1}`}
                           width={1920}
                           height={1080}
-                          className="max-w-full h-auto object-contain"
+                          className="max-w-full h-full"
                           priority={index === currentIndex}
                         />
                       </div>
@@ -155,15 +146,23 @@ const ImageModal: React.FC<ImageModalProps> = ({
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              
+
               {/* Navigation buttons */}
-              <CarouselPrevious 
+              <CarouselPrevious
                 className="left-4 bg-black/50 hover:bg-black/70 text-white border-gray-600"
-                onClick={() => setCurrentIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1))}
+                onClick={() =>
+                  setCurrentIndex((prev) =>
+                    prev > 0 ? prev - 1 : images.length - 1
+                  )
+                }
               />
-              <CarouselNext 
+              <CarouselNext
                 className="right-4 bg-black/50 hover:bg-black/70 text-white border-gray-600"
-                onClick={() => setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))}
+                onClick={() =>
+                  setCurrentIndex((prev) =>
+                    prev < images.length - 1 ? prev + 1 : 0
+                  )
+                }
               />
             </Carousel>
           )}

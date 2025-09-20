@@ -183,7 +183,10 @@ export const projects = [
       { name: "Tailwind CSS", img: "/tech/tailwind.svg" },
       { name: "React Query", img: "/tech/react-query.png" },
     ],
-    images: ["/projects/fantasy-pro-manager.png"],
+    images: [
+      "/projects/fantasy-pro-manager.png",
+      "/projects/fantasy-numbers.png",
+    ],
     live_preview: "https://fantasypromanager.com/ar",
     isFeatured: true,
   },

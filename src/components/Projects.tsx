@@ -60,7 +60,7 @@ const RecentProjects = () => {
             inView
             delay={0.2 * index}
             key={index}
-            className={cn("h-full", index === 2 ? "col-span-full" : "")}
+            className={cn("h-full",  item?.isFeatured ? "col-span-full" : "")}
           >
             <Tilt
               glareColor="#2563eb"
@@ -87,7 +87,7 @@ const RecentProjects = () => {
                 
                 {/* Main project image with click functionality */}
                 <div 
-                  className="z-10 absolute max-h-full w-full bottom-3 sm:bottom-7 max-w-[93%] cursor-pointer group/image"
+                  className="z-10 absolute h-full w-full top-3 sm:top-8 max-w-[93%] cursor-pointer group/image"
                   onClick={() => openModal(item.images, 0, item.name)}
                 >
                   <div className="relative">
@@ -96,7 +96,7 @@ const RecentProjects = () => {
                       alt={`${item.name} preview`}
                       width={1920}
                       height={1080}
-                      className="w-full object-top object-cover group-hover:rotate-0 transition-all rotate-[5deg] rounded-2xl"
+                      className={cn("w-full h-60 object-top object-cover group-hover:rotate-0 transition-all rotate-[5deg] rounded-2xl", item?.isFeatured && "h-[60vh] my-auto" )}
                     />
                     
                     {/* Hover overlay with zoom icon */}
