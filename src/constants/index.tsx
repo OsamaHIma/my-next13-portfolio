@@ -174,7 +174,7 @@ export const certificates = [
 ];
 
 export const projects = [
- // {
+ /* {
     name: "Fantasy Pro Manager",
     description: "descriptions.fantasyProManager",
     tags: [
@@ -189,7 +189,7 @@ export const projects = [
     ],
     live_preview: "https://fantasypromanager.com/ar",
     isFeatured: true,
-  },//
+  },*/
   {
     name: "Fantasy Pro Manager — Expert & Admin Dashboards",
     description: "descriptions.fantasyProManagerDashboards",
