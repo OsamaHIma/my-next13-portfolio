@@ -173,8 +173,18 @@ export const certificates = [
   },
 ];
 
-export const projects = [
- /* {
+type Project = {
+  name: string;
+  description: string;
+  tags: { name: string; img: string }[];
+  images: string[];
+  live_preview?: string;
+  isFeatured?: boolean;
+  source_code_link?: string;
+};
+
+export const projects: Project[] = [
+  /* {
     name: "Fantasy Pro Manager",
     description: "descriptions.fantasyProManager",
     tags: [
