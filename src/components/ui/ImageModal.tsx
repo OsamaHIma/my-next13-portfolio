@@ -2,11 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import {
-  ResponsiveModal,
-  ResponsiveModalContent,
-  ResponsiveModalTitle,
-} from "@/components/ui/responsive-modal";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   Carousel,
   CarouselContent,
@@ -96,14 +92,11 @@ const ImageModal: React.FC<ImageModalProps> = ({
   if (!isOpen || images.length === 0) return null;
 
   return (
-    <ResponsiveModal open={isOpen} onOpenChange={onClose}>
-      <ResponsiveModalContent
-        side="bottom"
-        className="max-w-7xl w-[95vw] max-h-[95svh] h-[95svh] p-0 bg-black/95 border-gray-800"
-      >
-        <ResponsiveModalTitle className="sr-only">
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-7xl w-[95vw] h-[95vh] p-0 bg-black/95 border-gray-800">
+        <DialogTitle className="sr-only">
           {projectName} - {t("Image Gallery")}
-        </ResponsiveModalTitle>
+        </DialogTitle>
 
         {/* Image counter */}
         {images.length > 1 && (
@@ -195,8 +188,8 @@ const ImageModal: React.FC<ImageModalProps> = ({
             ))}
           </div>
         )}
-      </ResponsiveModalContent>
-    </ResponsiveModal>
+      </DialogContent>
+    </Dialog>
   );
 };
 
