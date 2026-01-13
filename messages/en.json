@@ -58,7 +58,8 @@
       "fantasyProManagerDashboards": "Developed dual dashboard systems: Expert Dashboard for predictions/data management and secure Admin Dashboard for system control. Built with Laravel REST API backend and React.js frontend, featuring role-based authentication, real-time data updates, and modern UI. Created secure expert registration system with comprehensive permission management and data validation.",
       "masaPlatform": "Developed official platform for MASA, a Saudi initiative empowering women through programs and events. Built under supervision of the Coordinating Committee for Women's Associations in Saudi Arabia and National Council of NGOs. Implemented features to unify women-led organizations, facilitate knowledge exchange, and elevate leadership excellence.",
       "kayanBookstore": "Developed modern e-commerce platform for books, electronics, and educational products with intuitive shopping experience. Implemented advanced filtering, search functionality, and secure payment integration. Achieved excellent accessibility scores and mobile-first responsive design."
-    }
+    },
+    "more": "More"
   },
   "NotFound": {
     "title": "Page Not Found",
