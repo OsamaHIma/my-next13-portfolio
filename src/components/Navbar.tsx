@@ -44,7 +44,7 @@ export default function NavbarComponent() {
         <NavbarBrand>
           <Link
             href="/"
-            className="font-bold bg-linear-to-tr bg-clip-text text-transparent from-purple-200 via-blue-600 to-purple-500"
+            className="font-bold font-poppins bg-linear-to-tr bg-clip-text text-transparent from-purple-200 via-blue-600 to-purple-500"
           >
             Osama Ibrahim
           </Link>
