@@ -27,15 +27,15 @@ export async function generateMetadata({
       locale === "ar"
         ? "أنا مطور واجهات أمامية من مصر متخصص في بناء مواقع ويب سريعة الاستجابة وسهلة الاستخدام باستخدام Next.js و React وتقنيات الويب الحديثة الأخرى"
         : "I am a Front-end Developer from Egypt with expertise in building responsive and user-friendly websites using Next.js, React, and other modern web technologies",
-    openGraph: {
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
+    // openGraph: {
+    //   images: [
+    //     {
+    //       url: "/og-image.png",
+    //       width: 1200,
+    //       height: 630,
+    //     },
+    //   ],
+    // },
     keywords:
       locale === "ar"
         ? "مطور واجهات أمامية، مطور ويب، مطور رياكت، مطور نكست جي اس، مطور واجهة مستخدم، خبير جافاسكريبت، تايبسكريبت، تطوير الويب، رياكت، تطبيقات ويب حديثة، تصميم متجاوب، تطوير واجهة المستخدم، هندسة الواجهات الأمامية، تطوير المواقع، برمجة الويب، مطور مصري، تطوير مواقع عربية، مطور ثنائي اللغة"
