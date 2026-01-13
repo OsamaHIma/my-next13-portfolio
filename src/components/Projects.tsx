@@ -109,7 +109,7 @@ const RecentProjects = () => {
                     {/* Multiple images indicator */}
                     {item.images.length > 1 && (
                       <div className="absolute top-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
-                        +{item.images.length - 1} more
+                        +{item.images.length - 1} {t("more")}
                       </div>
                     )}
                   </div>

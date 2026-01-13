@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { X } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import {
   Carousel,
@@ -12,6 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
 
 interface ImageModalProps {
   /**
@@ -48,7 +48,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
   projectName,
 }) => {
   const [currentIndex, setCurrentIndex] = React.useState(initialIndex);
-
+  const locale = useLocale();
   // Reset current index when modal opens with different initial index
   React.useEffect(() => {
     if (isOpen) {
@@ -126,6 +126,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
               opts={{
                 align: "center",
                 loop: true,
+                direction: locale === "ar" ? "rtl" : "ltr",
               }}
             >
               <CarouselContent className="h-full">
