@@ -1,0 +1,4 @@
+Hello, i'm osama, an experienced Front-end Developer with 2+ years of expertise in building scalable web applications using React.js, Next.js,
+and TypeScript. Proven track record of delivering high-performance solutions with excellent user experiences, including a
+platform that achieved 40,000+ visitors in its first week. Passionate about creating responsive, accessible, and
+SEO-optimized applications that drive user engagement and business growth
