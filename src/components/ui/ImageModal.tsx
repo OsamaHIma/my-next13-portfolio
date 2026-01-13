@@ -2,7 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import {
+  ResponsiveModal,
+  ResponsiveModalContent,
+  ResponsiveModalTitle,
+} from "@/components/ui/responsive-modal";
 import {
   Carousel,
   CarouselContent,
@@ -92,11 +96,14 @@ const ImageModal: React.FC<ImageModalProps> = ({
   if (!isOpen || images.length === 0) return null;
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-7xl w-[95vw] h-[95vh] p-0 bg-black/95 border-gray-800">
-        <DialogTitle className="sr-only">
+    <ResponsiveModal open={isOpen} onOpenChange={onClose}>
+      <ResponsiveModalContent
+        side="bottom"
+        className="max-w-7xl w-[95vw] max-h-[95svh] h-[95svh] p-0 bg-black/95 border-gray-800"
+      >
+        <ResponsiveModalTitle className="sr-only">
           {projectName} - {t("Image Gallery")}
-        </DialogTitle>
+        </ResponsiveModalTitle>
 
         {/* Image counter */}
         {images.length > 1 && (
@@ -151,7 +158,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
 
               {/* Navigation buttons */}
               <CarouselPrevious
-                className="left-4 bg-black/50 hover:bg-black/70 text-white border-gray-600"
+                className="start-4 bg-black/50 hover:bg-black/70 text-white border-gray-600"
                 onClick={() =>
                   setCurrentIndex((prev) =>
                     prev > 0 ? prev - 1 : images.length - 1
@@ -159,7 +166,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
                 }
               />
               <CarouselNext
-                className="right-4 bg-black/50 hover:bg-black/70 text-white border-gray-600"
+                className="end-4 bg-black/50 hover:bg-black/70 text-white border-gray-600"
                 onClick={() =>
                   setCurrentIndex((prev) =>
                     prev < images.length - 1 ? prev + 1 : 0
@@ -188,8 +195,8 @@ const ImageModal: React.FC<ImageModalProps> = ({
             ))}
           </div>
         )}
-      </DialogContent>
-    </Dialog>
+      </ResponsiveModalContent>
+    </ResponsiveModal>
   );
 };
 
