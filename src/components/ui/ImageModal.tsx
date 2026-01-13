@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 interface ImageModalProps {
   /**
@@ -49,6 +49,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = React.useState(initialIndex);
   const locale = useLocale();
+  const t = useTranslations();
   // Reset current index when modal opens with different initial index
   React.useEffect(() => {
     if (isOpen) {
@@ -94,7 +95,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-7xl w-[95vw] h-[95vh] p-0 bg-black/95 border-gray-800">
         <DialogTitle className="sr-only">
-          {projectName} - Image Gallery
+          {projectName} - {t("Image Gallery")}
         </DialogTitle>
 
         {/* Image counter */}
