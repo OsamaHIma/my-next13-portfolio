@@ -11,7 +11,7 @@ const Footer = () => {
   console.log(local);
   return (
     <footer
-      className="w-full relative overflow-hidden pt-20 pb-10"
+      className="w-full relative overflow-hidden pt-20 pb-10 z-10"
       id="contact"
     >
       {/* background grid */}
@@ -54,6 +54,7 @@ const Footer = () => {
         <a
           title={t("Hero.contactMe")}
           href="mailto:osamahima018@gmail.com?subject=Project%20Inquiry"
+          className="z-10"
         >
           <MagicButton
             title={t("Hero.contactMe")}
