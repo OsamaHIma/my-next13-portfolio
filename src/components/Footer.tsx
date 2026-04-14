@@ -1,94 +1,41 @@
-import { NavigationIcon } from "lucide-react";
-import MagicButton from "./ui/MagicButton";
-import { socialIcons } from "@/constants";
-import { useTranslations, useLocale } from "next-intl";
-import { Fragment } from "react";
-import Image from "next/image";
+import * as m from '#/paraglide/messages'
 
-const Footer = () => {
-  const t = useTranslations();
-  const local = useLocale();
-  console.log(local);
+const NAV_LINKS = [
+  { key: 'work', href: '#work' },
+  { key: 'about', href: '#about' },
+  { key: 'skills', href: '#skills' },
+  { key: 'contact', href: '#contact' },
+] as const
+
+function getNavLabel(key: string) {
+  const labels: Record<string, () => string> = {
+    work: m.nav_work,
+    about: m.nav_about,
+    skills: m.nav_skills,
+    contact: m.nav_contact,
+  }
+  return labels[key]?.() ?? key
+}
+
+export default function Footer() {
+  const year = new Date().getFullYear()
+
   return (
-    <footer
-      className="w-full relative overflow-hidden pt-20 pb-10 z-10"
-      id="contact"
-    >
-      {/* background grid */}
-      <div className="w-full absolute left-0 z-1 -bottom-72 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1260}
-          height={863}
-          className="w-full h-full opacity-50"
-        />
+    <footer className="gb-t px-4 sm:px-8 md:px-16 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
+      <a href="#" className="text-xl tracking-wider no-underline">
+        <span className="text-portfolio-cream">Osama</span>
+        <span className="text-portfolio-gold">.</span>
+      </a>
+      <div className="flex gap-5 sm:gap-8">
+        {NAV_LINKS.filter((l) => l.key !== 'skills').map((link) => (
+          <a key={link.key} href={link.href} className="nl">
+            {getNavLabel(link.key)}
+          </a>
+        ))}
       </div>
-
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          {t("Footer.heading")
-            .split(/(?:your|بحضورك)/)
-            .map((part, i) =>
-              i === 0 ? (
-                <Fragment key={i}>
-                  {part}
-                  <span className="bg-linear-to-tr bg-clip-text text-transparent from-purple-200 from-40% via-80% via-blue-600 to-purple-500">
-                    {t("Footer.heading").includes(
-                      local === "ar" ? "بحضورك" : "your"
-                    )
-                      ? local === "ar"
-                        ? "بحضورك"
-                        : "your"
-                      : ""}
-                  </span>
-                </Fragment>
-              ) : (
-                part
-              )
-            )}
-        </h1>
-        <p className="text-default-500 md:mt-10 my-5 text-center">
-          {t("Footer.subheading")}
-        </p>
-        <a
-          title={t("Hero.contactMe")}
-          href="mailto:osamahima018@gmail.com?subject=Project%20Inquiry"
-          className="z-10"
-        >
-          <MagicButton
-            title={t("Hero.contactMe")}
-            icon={<NavigationIcon />}
-            position="right"
-            className="rounded-full"
-            otherClasses="rounded-full"
-          />
-        </a>
-      </div>
-      <div className="flex mt-16 md:flex-row flex-col gap-6 justify-between items-center container z-10">
-        <p className="md:text-base text-sm md:font-normal font-light z-10">
-          {t("Footer.Copyright")} © 2024{" "}
-          {/* <span className="font-bold bg-linear-to-tr bg-clip-text text-transparent from-purple-300 from-20% via-50% via-blue-600 to-purple-500">
-            {t("Hero.name")}
-          </span> */}
-        </p>
-
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialIcons.map((info) => (
-            <a
-              key={info.name}
-              title={info.name}
-              href={info.url}
-              target="_blank"
-              className="w-10 h-10 z-10 flex justify-center items-center text-white bg-linear-to-tr from-blue-600 to-purple-500 rounded-lg"
-            >
-              {info?.icon}
-            </a>
-          ))}
-        </div>
-      </div>
+      <p className="text-xs text-[rgba(237,234,222,0.2)] tracking-[0.04em]">
+        © {year} Osama Ibrahim 🇪🇬
+      </p>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}

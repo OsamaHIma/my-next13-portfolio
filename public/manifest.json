@@ -1,28 +1,25 @@
 {
-  "name": "Osama Ibrahim Portfolio",
-  "short_name": "OI Portfolio",
-  "description": "Front-end Developer from Egypt with expertise in building responsive and user-friendly websites using Next.js, React, and other modern web technologies",
-  "theme_color": "#3B82F6",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "orientation": "any",
-  "scope": "/",
-  "start_url": "/",
+  "short_name": "TanStack App",
+  "name": "Create TanStack App Sample",
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icon-256x256.png",
-      "type": "image/png",
-      "sizes": "256x256"
-    },
-    {
-      "src": "/icon-512x512.png",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }

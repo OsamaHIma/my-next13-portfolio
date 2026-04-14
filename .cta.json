@@ -1,0 +1,26 @@
+{
+  "projectName": "my-tanstak-portfolio",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "pnpm",
+  "git": true,
+  "install": true,
+  "addOnOptions": {},
+  "includeExamples": true,
+  "envVarValues": {},
+  "routerOnly": false,
+  "version": 1,
+  "addOns": true,
+  "framework": "react",
+  "chosenAddOns": [
+    "tanstack-query",
+    "eslint",
+    "resume",
+    "t3env",
+    "shadcn",
+    "paraglide",
+    "mcp",
+    "compiler"
+  ]
+}
